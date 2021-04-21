@@ -1,96 +1,67 @@
 import React, { useState } from 'react';
+import Dropdown from '../UI/Dropdown';
+import Logo from '../../images/logo.jpeg'
+
+import {
+  Link
+} from "react-router-dom";
+
+
 
 const Nav = () => {
+    const items = ["DISEC", "ECOFIN", "SOCHUM", "WHO", "UNSC", "UNW", "UNICEF"];
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
-        <div className="px-4 py-6 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+      <div className="z-40 px-4 py-6 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
           <div className="relative flex items-center justify-between lg:justify-center lg:space-x-16">
             <ul className="flex items-center hidden space-x-8 lg:flex">
               <li>
-                <a
-                  href="/"
-                  aria-label="Our product"
-                  title="Our product"
-                  className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                >
-                  Product
-                </a>
+              <Link to="/allocations" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Allocations</Link>
               </li>
               <li>
-                <a
-                  href="/"
-                  aria-label="Our product"
-                  title="Our product"
-                  className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                >
-                  Features
-                </a>
+                <Link to="/core-team" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Core Team</Link>
               </li>
               <li>
-                <a
-                  href="/"
-                  aria-label="Product pricing"
-                  title="Product pricing"
-                  className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                >
-                  Pricing
-                </a>
-              </li>
+                <Dropdown title="Committees" items={items}/>
+            </li>
             </ul>
             <a
               href="/"
-              aria-label="Company"
-              title="Company"
+              aria-label="IGNIS-MUN"
+              title="IGNIS-MUN"
               className="inline-flex items-center"
             >
-              <svg
-                className="w-8 text-deep-purple-accent-400"
-                viewBox="0 0 24 24"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeMiterlimit="10"
-                stroke="currentColor"
-                fill="none"
-              >
-                <rect x="3" y="1" width="7" height="12" />
-                <rect x="3" y="17" width="7" height="6" />
-                <rect x="14" y="1" width="7" height="6" />
-                <rect x="14" y="11" width="7" height="12" />
-              </svg>
-              <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                Company
-              </span>
+            <img src={Logo} alt="Logo" className="object-contain" height="200px" width="200px" />
             </a>
             <ul className="flex items-center hidden space-x-8 lg:flex">
               <li>
                 <a
                   href="/"
-                  aria-label="About us"
-                  title="About us"
+                  aria-label="Resources"
+                  title="Resources"
                   className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
-                  About us
+                  Resources
                 </a>
               </li>
               <li>
                 <a
                   href="/"
-                  aria-label="Sign in"
-                  title="Sign in"
+                  aria-label="FAQ"
+                  title="FAQ"
                   className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
-                  Sign in
+                  FAQ
                 </a>
               </li>
               <li>
                 <a
                   href="/"
-                  aria-label="Sign up"
-                  title="Sign up"
+                  aria-label="Contact"
+                  title="Contact"
                   className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
-                  Sign up
+                  Contact
                 </a>
               </li>
             </ul>
@@ -168,61 +139,54 @@ const Nav = () => {
                         <li>
                           <a
                             href="/"
-                            aria-label="Our product"
-                            title="Our product"
+                            aria-label="Allocations"
+                            title="Allocations"
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                           >
-                            Product
+                            Allocations
                           </a>
                         </li>
                         <li>
                           <a
                             href="/"
-                            aria-label="Our product"
-                            title="Our product"
+                            aria-label="Core team"
+                            title="Core team"
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                           >
-                            Features
+                            Core team
+                          </a>
+                        </li>
+                        <li>
+                          
+                        </li>
+                        <li>
+                          <a
+                            href="/"
+                            aria-label="Resources"
+                            title="Resources"
+                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          >
+                            Resources
                           </a>
                         </li>
                         <li>
                           <a
                             href="/"
-                            aria-label="Product pricing"
-                            title="Product pricing"
+                            aria-label="FAQ"
+                            title="FAQ"
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                           >
-                            Pricing
+                            FAQ
                           </a>
                         </li>
                         <li>
                           <a
                             href="/"
-                            aria-label="About us"
-                            title="About us"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-yellow-500 hover:shadow-2xl"
+                            aria-label="Contact"
+                            title="Contact"
                           >
-                            About us
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="/"
-                            aria-label="Sign in"
-                            title="Sign in"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          >
-                            Sign in
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="/"
-                            className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                            aria-label="Sign up"
-                            title="Sign up"
-                          >
-                            Sign up
+                            Contact
                           </a>
                         </li>
                       </ul>
@@ -233,7 +197,7 @@ const Nav = () => {
             </div>
           </div>
         </div>
-      );
+    );
 };
 
 export default Nav
