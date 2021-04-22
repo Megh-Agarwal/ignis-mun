@@ -35,34 +35,13 @@ const Nav = () => {
             </a>
             <ul className="flex items-center hidden space-x-8 lg:flex">
               <li>
-                <a
-                  href="/"
-                  aria-label="Resources"
-                  title="Resources"
-                  className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                >
-                  Resources
-                </a>
+                <Link to="/resources" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Resources</Link>
               </li>
               <li>
-                <a
-                  href="/"
-                  aria-label="FAQ"
-                  title="FAQ"
-                  className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                >
-                  FAQ
-                </a>
+                <Link to="/faq" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">FAQ</Link>
               </li>
               <li>
-                <a
-                  href="/"
-                  aria-label="Contact"
-                  title="Contact"
-                  className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                >
-                  Contact
-                </a>
+                <Link to="/contact" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Contact</Link>
               </li>
             </ul>
             <div className="lg:hidden">
