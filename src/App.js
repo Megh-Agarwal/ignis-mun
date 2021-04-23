@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import FAQ from './components/FAQ/FAQ'
 import Resources from './components/Resources/Resources'
 import Contact from './components/Contact/Contact';
+import Committee from "./components/Committee/Committee";
 
 import React from "react";
 import {
@@ -40,6 +41,7 @@ function App() {
           <Route path="/contact" exact>
             <Contact />
           </Route>
+          <Route exact path="/committee/:name" component={Committee} />
         </Switch>
       <Footer/>
     </Router>

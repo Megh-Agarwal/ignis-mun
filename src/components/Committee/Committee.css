@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
+
+.committee-container {
+  padding: 0 3%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.committee-container .text {
+  text-align: left;
+  width: 80ch;
+}
+
+.committee-container .head {
+  font-size: 18pt;
+  font-family: 'Merriweather', serif;
+}
+
+.resources {
+  margin-top: 20px;
+}
+
+.com-btn-grp {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 5px;
+}
+
+.resources button {
+  background-color: #eee;
+  padding: 5px 20px;
+  width: 230px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+
+  transition: all 500ms;
+}
+
+.resources button:hover {
+  transform: scale(0.98);
+  filter: brightness(0.9);
+}
+
+.resources button:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 1165px) {
+  .committee-container .text {
+    order: 2;
+    padding: 20px;
+    width: 100%;
+  }
+}

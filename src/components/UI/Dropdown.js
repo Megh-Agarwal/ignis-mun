@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
+import { Link } from 'react-router-dom';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -11,15 +12,15 @@ const Dropdown = (props) => {
     const items = props.items.map(item => {
         return <Menu.Item>
             {({ active }) => (
-                <a
-                href="/"
-                className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                )}
-                >
-                {item}
-                </a>
+                <Link
+                    to={`/committee/${item}`}
+                    className={classNames(
+                        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                        'block px-4 py-2 text-sm'
+                    )}
+                    >
+                    {item}
+                </Link>
             )}
         </Menu.Item>
     })
