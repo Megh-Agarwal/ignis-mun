@@ -7,19 +7,18 @@ import {
 } from "react-router-dom";
 
 
-
 const Nav = () => {
-    const items = ["DISEC", "ECOFIN", "SOCHUM", "WHO", "UNSC", "UNW", "UNICEF"];
+    const items = ["DISEC", "ECOFIN", "SOCHUM", "UNODC", "CCC", "UNW", "NIGHT CRISIS"];
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
-      <div className="z-40 px-4 py-6 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+      <div className="font-serif text-xl z-40 relative px-4 py-6 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
           <div className="relative flex items-center justify-between lg:justify-center lg:space-x-16">
             <ul className="flex items-center hidden space-x-8 lg:flex">
               <li>
-              <Link to="/allocations" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Allocations</Link>
+              <Link to="/allocations" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Allocations</Link>
               </li>
               <li>
-                <Link to="/core-team" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Core Team</Link>
+                <Link to="/core-team" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Core Team</Link>
               </li>
               <li>
                 <Dropdown title="Committees" items={items}/>
@@ -35,13 +34,13 @@ const Nav = () => {
             </a>
             <ul className="flex items-center hidden space-x-8 lg:flex">
               <li>
-                <Link to="/resources" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Resources</Link>
+                <Link to="/resources" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Resources</Link>
               </li>
               <li>
-                <Link to="/faq" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">FAQ</Link>
+                <Link to="/faq" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">FAQ</Link>
               </li>
               <li>
-                <Link to="/contact" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Contact</Link>
+                <Link to="/contact" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Contact</Link>
               </li>
             </ul>
             <div className="lg:hidden">

@@ -5,7 +5,7 @@ import SecGeneralAddress from '../Content/Home/SecGeneralAddress';
 
 const Home = () => {
     return (
-        <div>
+        <div className="font-serif">
             <Header></Header>
             <AboutUs></AboutUs>
             <SecGeneralAddress></SecGeneralAddress>

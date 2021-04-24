@@ -4,7 +4,6 @@ import Team from './Team/Team';
 const CoreTeam = () => {
     return (
         <div>
-            <Header />
             <Team />
         </div>
     )

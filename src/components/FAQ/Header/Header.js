@@ -5,10 +5,10 @@ const Header = () => {
             <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
               <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
                 <a href="/" className="mb-6 sm:mx-auto">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-teal-accent-400">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-yellow-500 to-red-600">
                     <svg
                       className="w-10 h-10 text-deep-purple-900"
-                      stroke="currentColor"
+                      stroke="white"
                       viewBox="0 0 52 52"
                     >
                       <polygon

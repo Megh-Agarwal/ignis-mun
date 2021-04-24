@@ -1,62 +1,45 @@
+import React from 'react';
+import Signature from '../../../images/mylivesignature.png'
+
 const SecGeneralAddress = () => {
-    return (
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div className="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto">
-          <div className="relative lg:w-1/2">
-            <img
-              src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-              alt=""
-              className="object-cover w-full lg:absolute h-80 lg:h-full"
-            />
+  return (
+    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div className="max-w-screen-sm sm:text-center sm:mx-auto">
+        <a
+          href="/"
+          aria-label="View"
+          className="inline-block mb-5 rounded-full sm:mx-auto"
+        >
+          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-gradient-to-r from-yellow-500 to-red-600">
             <svg
-              className="absolute top-0 right-0 hidden h-full text-white lg:inline-block"
-              viewBox="0 0 20 104"
-              fill="currentColor"
+              className="w-12 h-12 text-deep-purple-accent-400"
+              stroke="white"
+              viewBox="0 0 52 52"
             >
-              <polygon points="17.3036738 5.68434189e-14 20 5.68434189e-14 20 104 0.824555778 104" />
+              <polygon
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fill="none"
+                points="29 13 14 29 25 29 23 39 38 23 27 23"
+              />
             </svg>
           </div>
-          <div className="flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 lg:w-1/2">
-            <div>
-              <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-                Brand new
-              </p>
-            </div>
-            <h5 className="mb-3 text-3xl font-extrabold leading-none sm:text-4xl">
-              Your new ideal style
-            </h5>
-            <p className="mb-5 text-gray-800">
-              <span className="font-bold">Lorem ipsum</span> dolor sit amet,
-              consectetur adipiscing elit. Etiam sem neque, molestie sit amet
-              venenatis et, dignissim ut erat. Sed aliquet velit id dui eleifend,
-              sed consequat odio sollicitudin.
-            </p>
-            <div className="flex items-center">
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-              >
-                Get started
-              </button>
-              <a
-                href="/"
-                aria-label=""
-                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-              >
-                Learn More
-                <svg
-                  className="inline-block w-3 ml-2"
-                  fill="currentColor"
-                  viewBox="0 0 12 12"
-                >
-                  <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
+        </a>
+        <h2 className="mb-4 font-serif text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+          Secretary General’s address
+        </h2>
+        <p className="text-base text-gray-700 md:text-lg sm:px-4 text-justify">
+          <p className="mb-5 text-center">To all our Esteemed Delegates, Members, Teachers, and Friends,</p>
+          Over the past decade, the world has been gripped by an increasing sense of uncertainty regarding where it is headed. The decade began amid a global financial crisis and subsequent international recession dating from the late 2000s. We have seen assertive nations like China attempting to expand its influence by militarizing the South China Sea. We have witnessed the oppression of cultural and religious minorities such as Muslims and people of color. We have witnessed the tension between Israelis and Palestinians that began in the mid-20th century. We have noticed the lack of women workers’ rights in South-East Asia and other multiple other regions. Moreover, we have witnessed the beginning of a the COVID-19 Pandemic which has ensued its own set of concerns: millions have been infected, countries have entered lockdowns, a record-breaking recession has been observed, and underprivileged children are being deprived of education, food, health, as well as safety.
+          We believe that most of us have turned to Model United Nations Conferences as an avenue to express our frustrations at these global problems and share the hope that, perhaps, these obstacles are not as intractable as they seem. We, as global citizens, are fortunate enough to be able to voice our opinions on these social, economic, and political issues freely, and we must leverage our privilege to work for the betterment of mankind. Therefore, we are excited to launch the Podar Model United Nations E-Conference, which will allow delegates to interact with broader global communities through a memorable and pedagogical experience. We promise to uphold our vision of enabling healthy debate to promote academic rigor, integrity, and personal growth for everyone who is a part of our family. We are very excited to work with you in order to solve the aforementioned global issues by discussing, collaborating, and ideating.
+          {/* Sincerely,
+          <img src={Signature} className="ml-15 justify-items-center" /> */}
+        </p>
+        <hr className="w-full my-8 border-gray-300" />
       </div>
-    );
-  };
+    </div>
+  );
+};
 
 export default SecGeneralAddress

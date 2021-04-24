@@ -5,7 +5,7 @@ const Allocations = () => {
     return (
         <div>
             <Header />
-            <Table />
+            {/* <Table /> */}
         </div>
     )
 }
