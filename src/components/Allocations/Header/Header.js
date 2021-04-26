@@ -1,4 +1,6 @@
-const Header = () => {
+import '../Allocations.css';
+
+const Header = (props) => {
   return (
     <div className="font-serif px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
@@ -50,17 +52,18 @@ const Header = () => {
               Allocations
             </h2>
             <p className="text-base text-gray-700 md:text-lg">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque rem aperiam, eaque ipsa quae.
+              Enter your email and to check your committee allocation
             </p>
           </div>
           <div>
-          <form className="flex flex-col items-center w-full mb-4 md:flex-row md:px-16">
+          <form onSubmit={props.findCommittee} className="flex flex-col items-center w-full mb-4 md:flex-row md:px-16 search-bar">
             <input
               placeholder="Email"
-              required=""
-              type="text"
+              required
+              type="email"
               className="flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-black-400 focus:outline-none"
+              value={props.email}
+              onChange={e => props.setEmail(e.target.value)}
             />
             <button
               type="submit"
