@@ -45,7 +45,7 @@ const Allocations = () => {
                     <Card comData={comData} />
                 </div>
             }
-            {isErr && <Alert/>}
+            {isErr && <Alert />}
         </div>
     )
 }

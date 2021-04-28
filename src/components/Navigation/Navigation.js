@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Dropdown from '../UI/Dropdown';
-import Logo from '../../images/logo.jpeg'
+import img from '../../images/logo.png';
 
 import {
   Link
@@ -30,7 +30,7 @@ const Nav = () => {
               title="IGNIS-MUN"
               className="inline-flex items-center"
             >
-            <img src={Logo} alt="Logo" className="object-contain" height="200px" width="200px" />
+            <img width="150" src={img} alt="Logo" className="object-contain" height="200px" width="200px" />
             </a>
             <ul className="flex items-center hidden space-x-8 lg:flex">
               <li>
@@ -76,7 +76,8 @@ const Nav = () => {
                           title="Company"
                           className="inline-flex items-center"
                         >
-                          <svg
+                          <img src={img} className="h-24" />
+                          {/* <svg
                             className="w-8 text-deep-purple-accent-400"
                             viewBox="0 0 24 24"
                             strokeLinejoin="round"
@@ -90,17 +91,17 @@ const Nav = () => {
                             <rect x="3" y="17" width="7" height="6" />
                             <rect x="14" y="1" width="7" height="6" />
                             <rect x="14" y="11" width="7" height="12" />
-                          </svg>
-                          <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                            Company
-                          </span>
+                          </svg> */}
+                          {/* <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+                            Ignis MUN
+                          </span> */}
                         </a>
                       </div>
                       <div>
                         <button
                           aria-label="Close Menu"
                           title="Close Menu"
-                          className="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                          className="absolute top-5 right-5 p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
@@ -116,7 +117,7 @@ const Nav = () => {
                       <ul className="space-y-4">
                         <li>
                           <a
-                            href="/"
+                            href="/allocations"
                             aria-label="Allocations"
                             title="Allocations"
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -126,7 +127,7 @@ const Nav = () => {
                         </li>
                         <li>
                           <a
-                            href="/"
+                            href="/core-team"
                             aria-label="Core team"
                             title="Core team"
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -135,11 +136,17 @@ const Nav = () => {
                           </a>
                         </li>
                         <li>
-                          
+                          <span
+                            aria-label="Committees"
+                            title="Committees"
+                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          >
+                            <Dropdown title="Committees" customStyle={isMenuOpen && "left-110"} items={items}/>
+                          </span>
                         </li>
                         <li>
                           <a
-                            href="/"
+                            href="/resources"
                             aria-label="Resources"
                             title="Resources"
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -149,22 +156,22 @@ const Nav = () => {
                         </li>
                         <li>
                           <a
-                            href="/"
+                            href="/faq"
                             aria-label="FAQ"
                             title="FAQ"
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                           >
-                            FAQ
+                            FAQs
                           </a>
                         </li>
                         <li>
                           <a
-                            href="/"
-                            className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-yellow-500 hover:shadow-2xl"
+                            href="/contact"
+                            className="font-serif inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-gradient-to-r from-yellow-500 to-red-600 hover:shadow-2xl"
                             aria-label="Contact"
                             title="Contact"
                           >
-                            Contact
+                            Contact Us
                           </a>
                         </li>
                       </ul>
