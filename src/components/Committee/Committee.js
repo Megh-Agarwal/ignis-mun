@@ -11,11 +11,7 @@ import './Committee.css';
 
 const Committee = () => {
   const { name } = useParams();
-  const [data, setData] = useState({});
-
-  useEffect(() => {
-    getComData();
-  }, [])
+  const [data, setData] = useState(null);
 
   const getComData = () => {
     axios.get('http://13.232.18.191/committees/' + name)
@@ -26,6 +22,15 @@ const Committee = () => {
         setData(res.data.committees[0])}
       )
       .catch(err => console.log(err));
+  }
+
+  useEffect(() => {
+    getComData()
+  }, [])
+
+
+  if(data == null){
+    return 'Loading...'
   }
 
   if (data !== {}) {
@@ -82,7 +87,7 @@ const Committee = () => {
   }
 }
 
-const Chair = ({ main }) => {
+const Chair = ({main}) => {
   return (
     <div className="chair">
       <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" />
@@ -92,7 +97,7 @@ const Chair = ({ main }) => {
   )
 }
 
-const Description = ({ description }) => {
+const Description = ({description}) => {
   const [isShown, setIsShown] = useState(false);
 
   function reduce(desc) {
