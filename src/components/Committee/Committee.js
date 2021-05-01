@@ -1,42 +1,115 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import { useParams } from 'react-router-dom';
+//import { useQuery } from 'react-query';
 
 import img from '../../images/who-emblem.png';
 import pdfIcon from '../../images/pdfIcon.png';
 import './Committee.css';
 
+//const getData = async(param) => await (await fetch('http://13.232.18.191/committees/' + param)).json();
+
 const Committee = () => {
   const { name } = useParams();
-  console.log(name)
+  const [data, setData] = useState({});
 
-  return (
-    <>
-      <div className="committee-container">
-        <div className="text">
-          <b>
-            <h1 className="head" >{ name.toUpperCase() } - Overview</h1>
-          </b>
-          <br/>
-          <p className="font-serif text-base md:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh praesent tristique magna sit. Enim ut sem viverra aliquet. Maecenas accumsan lacus vel facilisis volutpat est velit egestas dui. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Quis viverra nibh cras pulvinar mattis nunc sed blandit. Convallis posuere morbi leo urna. Cras tincidunt lobortis feugiat vivamus at augue eget arcu. Ipsum suspendisse ultrices gravida dictum fusce ut. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Posuere morbi leo urna molestie at elementum eu facilisis. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida.</p>
-          <div className="resources">
-            <h4 style={{ fontFamily: 'Merriweather, serif', fontSize: '14pt' }} ><u>Downloads</u></h4>
-            <div className="com-btn-grp">
-              <button style={{ marginRight: "10px" }} className="com-btn">
-                <img width="40" src={pdfIcon} />
-                <span>Study guide</span>
-              </button>
-              <button style={{ marginLeft: "10px" }} className="com-btn">
-                <img width="40" src={pdfIcon} />
-                <span>Committee Brief</span>
-              </button>
+  useEffect(() => {
+    getComData();
+  }, [])
+
+  const getComData = () => {
+    axios.get('http://13.232.18.191/committees/' + name)
+      .then(res => {
+        console.log(res.data);
+        console.log(res.data.committees)
+        console.log(res.data.committees[0])
+        setData(res.data.committees[0])}
+      )
+      .catch(err => console.log(err));
+  }
+
+  if (data !== {}) {
+    return (
+      <>
+        <div className="committee-container">
+          <div className="text">
+  
+            <b>
+              <h1 className="head" >{data.fullForm}({data.committee})</h1>
+            </b>
+            <br/>
+  
+            <Description description={data.description} /><br/>
+  
+            <p style={{fontFamily:'Merriweather, serif', fontSize:'14pt'}}>
+              <u>Agenda</u> - <span className="font-serif text-base md:text-lg">{ data.agenda }</span>
+            </p>
+  
+            <div className="resources">
+              <h4 style={{ fontFamily: 'Merriweather, serif', fontSize: '14pt' }} ><u>Downloads</u></h4>
+              
+              <div className="com-btn-grp">
+                <button style={{ marginRight: "10px" }} className="com-btn">
+                  <img width="40" src={pdfIcon} />
+                  <span>Study guide</span>
+                </button>
+  
+                <button style={{ marginLeft: "10px" }} className="com-btn">
+                  <img width="40" src={pdfIcon} />
+                  <span>Committee Brief</span>
+                </button>
+              </div>
+  
+            </div><br/>
+  
+            <h4 style={{ fontFamily: 'Merriweather, serif', fontSize: '14pt' }} ><u>The Executive Board</u></h4>
+            <div className="main">
+              {console.log(data)}
+              {
+                data.main.map((main, i) => <Chair key={i} main={main} />)
+              }
             </div>
           </div>
+  
+          <div className="committee-logo">
+            <img width="300px" src={img}/>
+          </div>
         </div>
-        <div className="committee-logo">
-          <img width="300px" src={img}/>
-        </div>
-      </div>
-    </>
-  );
+      </>
+    );
+  } else {
+    return 'Loading'
+  }
 }
+
+const Chair = ({ main }) => {
+  return (
+    <div className="chair">
+      <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" />
+      <h4 style={{fontFamily:'Merriweather, serif', fontSize:'14pt', textDecoration:'underline'}}>{main.position}</h4>
+      <h4 className="inline-block font-serif text-base md:text-lg">{main.name}</h4>
+    </div>
+  )
+}
+
+const Description = ({ description }) => {
+  const [isShown, setIsShown] = useState(false);
+
+  function reduce(desc) {
+    const descArr = desc.substr(0, 500).split(' ');
+    descArr.pop();
+    return descArr.join(' ') + '...';
+  }
+
+  return (
+    <p className="font-serif text-base md:text-lg">
+      {
+        isShown ? description : reduce(description)
+      }
+      <button className="text-blue-700 font-bold focus:outline-none hover:underline" onClick={() => setIsShown(!isShown)}>Hide</button>
+    </p>
+  )
+}
+
 
 export default Committee;

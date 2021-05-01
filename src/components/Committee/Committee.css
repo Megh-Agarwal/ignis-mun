@@ -30,7 +30,7 @@
 }
 
 .resources button {
-  background-color: #ddd;
+  background-color: #eee;
   padding: 5px 20px;
   width: 230px;
   font-family: 'Merriweather', serif;
@@ -44,11 +44,28 @@
 }
 
 .resources button:hover {
-  filter: brightness(1.07);
+  filter: brightness(0.95);
 }
 
 .resources button:focus {
   outline: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin-top:20px;
+}
+
+
+.chair img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 1165px) {

@@ -1,15 +1,10 @@
 import { useState } from 'react';
+import axios from 'axios';
 
 import Header from './Header/Header';
 import Card from './Card';
 import Alert from './Alert';
 import './Allocations.css';
-
-const data = [
-    { email: 'example@example.com', abbreviation: 'WHO', committee: 'World Health Organization' },
-    { email: 'example2@example2.com', abbreviation: 'DISEC', committee:'The Disarmament and International Security Committe'},
-    { email: 'example3@example3.com', abbreviation: 'UNSC', committee: 'United Nations Security Council' }
-]
 
 const Allocations = () => {
 
@@ -22,17 +17,19 @@ const Allocations = () => {
         e.preventDefault();
         setIsErr(false);
         let com = null;
-        data.forEach(item => {
-            if (item.email === email) {
-                setComData(item);
-                setIsShown(true);
-                com = 'exists';
-            }
-        });
-        if (!com) {
-            setIsShown(false);
-            setIsErr(true)
-        }
+        axios.get('http://13.232.18.191/allocations/' + email)
+            .then(res => {
+                if (res.data.allocations.length !== 0) {
+                    setComData(res.data.allocations[0].committee);
+                    setIsShown(true);
+                    com = true;
+                }
+
+                if (!com) {
+                    setIsShown(false);
+                    setIsErr(true)
+                }
+            })
     }
 
     return (
