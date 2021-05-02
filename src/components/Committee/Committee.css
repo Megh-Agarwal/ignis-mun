@@ -25,6 +25,7 @@
 
 .com-btn-grp {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   margin-top: 5px;
 }
@@ -34,13 +35,13 @@
   padding: 5px 20px;
   width: 230px;
   font-family: 'Merriweather', serif;
+  border-radius: 10px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 10px;
 
-  transition: all 500ms;
+  transition: filter 500ms;
 }
 
 .resources button:hover {
@@ -76,15 +77,38 @@
   }
 }
 
-.spinner {
-  height: 200px;
-  width: 200px;
-  margin: 0 auto;
-  animation: spinner 0.7s linear infinite;
+#spinner:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: coral;
+  border-bottom-color: coral;
+  animation: spinner 0.7s ease infinite;
+}
+
+#spinner {
+  height: 100vh;
+}
+
+#loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14pt;
 }
 
 @keyframes spinner {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
   to {
-    transform: rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }

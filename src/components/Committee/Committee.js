@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 
 import img from '../../images/who-emblem.png';
 import pdfIcon from '../../images/pdfIcon.png';
+import pdfSvg from '../../images/pdf.svg';
 import './Committee.css';
 
 import Spinner from './Spinner'
@@ -32,7 +33,7 @@ const Committee = () => {
     return <Spinner/>
   }
 
-  if (data !== {}) {
+  else if (data !== {}) {
     return (
       <>
         <div className="committee-container">
@@ -53,13 +54,14 @@ const Committee = () => {
               <h4 style={{ fontFamily: 'Merriweather, serif', fontSize: '14pt' }} ><u>Downloads</u></h4>
               
               <div className="com-btn-grp">
-                <button style={{ marginRight: "10px" }} className="com-btn">
-                  <i style={{fontSize:'25pt', padding:'5px'}} class="fas fa-file-pdf"></i>
+                <button className="mx-2 my-2 com-btn">
+                  <img width="40px" className="py-2" src={pdfSvg}/>
                   <span>Study guide</span>
                 </button>
   
-                <button style={{ marginLeft: "10px" }} className="com-btn">
-                  <i style={{fontSize:'25pt', padding:'5px'}} class="fas fa-file-pdf"></i>
+                <button className="mx-2 my-2 com-btn">
+                  {/* <i style={{fontSize:'25pt', padding:'5px'}} class="fas fa-file-pdf"></i> */}
+                  <img width="40px" className="py-2" src={pdfSvg}/>
                   <span>Committee Brief</span>
                 </button>
               </div>
