@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-//import { useQuery } from 'react-query';
 
 import img from '../../images/who-emblem.png';
 import pdfIcon from '../../images/pdfIcon.png';
 import './Committee.css';
 
-//const getData = async(param) => await (await fetch('http://13.232.18.191/committees/' + param)).json();
+import Spinner from './Spinner'
 
 const Committee = () => {
   const { name } = useParams();
@@ -30,7 +29,7 @@ const Committee = () => {
 
 
   if(data == null){
-    return 'Loading...'
+    return <Spinner/>
   }
 
   if (data !== {}) {
@@ -55,12 +54,12 @@ const Committee = () => {
               
               <div className="com-btn-grp">
                 <button style={{ marginRight: "10px" }} className="com-btn">
-                  <img width="40" src={pdfIcon} />
+                  <i style={{fontSize:'25pt', padding:'5px'}} class="fas fa-file-pdf"></i>
                   <span>Study guide</span>
                 </button>
   
                 <button style={{ marginLeft: "10px" }} className="com-btn">
-                  <img width="40" src={pdfIcon} />
+                  <i style={{fontSize:'25pt', padding:'5px'}} class="fas fa-file-pdf"></i>
                   <span>Committee Brief</span>
                 </button>
               </div>

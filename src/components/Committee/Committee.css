@@ -75,3 +75,16 @@
     width: 100%;
   }
 }
+
+.spinner {
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  animation: spinner 0.7s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
