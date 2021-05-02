@@ -7,7 +7,6 @@ const Home = () => {
     return (
         <div className="font-serif">
             <Header></Header>
-            <AboutUs></AboutUs>
             <SecGeneralAddress></SecGeneralAddress>
         </div>
     )

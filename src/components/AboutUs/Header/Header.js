@@ -1,12 +1,20 @@
 import React, { useState, useRef, useEffect} from 'react';
+import AboutUsContent from '../Content'
 
-import {
-  Link
-} from "react-router-dom";
 const Header = () => {
 
+  // const myRef = useRef(null)
+
+  // useEffect(() => {
+  //   if (myRef.current) {
+  //     executeScroll();
+  //   }
+  // }, [myRef.current])
+
+  // const executeScroll = () => myRef.current.scrollIntoView() 
+
   return (
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div className="font-serif px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
         <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
           <a className="mb-6 sm:mx-auto">
@@ -51,16 +59,14 @@ const Header = () => {
                     height="24"
                   />
                 </svg>
-                <span className="relative">Ignis</span>
+                <span className="relative">About</span>
               </span>{' '}
-              <span className="text-5xl">Model United Nations 2021</span>
+              <span className="text-5xl">us</span>
             </h2>
             <p className="text-2xl">
-              28th May | 30th May
+              Learn more about us
             </p>
-          </div>
-          <div>
-            <Link to="/about-us" className="font-serif inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-gradient-to-r from-yellow-500 to-red-600">Learn more</Link>
+            <AboutUsContent />
           </div>
         </div>
       </div>

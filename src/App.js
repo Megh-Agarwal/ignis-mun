@@ -10,6 +10,7 @@ import FAQ from './components/FAQ/FAQ'
 import Resources from './components/Resources/Resources'
 import Contact from './components/Contact/Contact';
 import Committee from "./components/Committee/Committee";
+import AboutUs from './components/AboutUs/AboutUs';
 
 import React from "react";
 import {
@@ -41,6 +42,9 @@ function App() {
           </Route>
           <Route path="/contact" exact>
             <Contact />
+          </Route>
+          <Route path="/about-us" exact>
+            <AboutUs />
           </Route>
           <Route exact path="/committee/:name" component={Committee} />
         </Switch>

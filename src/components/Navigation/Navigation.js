@@ -6,7 +6,6 @@ import {
   Link
 } from "react-router-dom";
 
-
 const Nav = () => {
     const items = ["DISEC", "ECOFIN", "SOCHUM", "UNODC", "CCC", "UNW", "NIGHT CRISIS"];
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,14 +14,14 @@ const Nav = () => {
           <div className="relative flex items-center justify-between lg:justify-center lg:space-x-16">
             <ul className="flex items-center hidden space-x-8 lg:flex">
               <li>
-              <Link to="/allocations" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Allocations</Link>
+                <Link to="/about-us" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">About us</Link>
               </li>
               <li>
                 <Link to="/core-team" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Core Team</Link>
               </li>
               <li>
                 <Dropdown title="Committees" items={items}/>
-            </li>
+              </li>
             </ul>
             <a
               href="/"
@@ -33,6 +32,9 @@ const Nav = () => {
             <img width="150" src={img} alt="Logo" className="object-contain" height="200px" width="200px" />
             </a>
             <ul className="flex items-center hidden space-x-8 lg:flex">
+              <li>
+                <Link to="/allocations" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Allocations</Link>
+              </li>
               <li>
                 <Link to="/resources" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Resources</Link>
               </li>
@@ -115,65 +117,27 @@ const Nav = () => {
                     </div>
                     <nav>
                       <ul className="space-y-4">
-                        <li>
-                          <a
-                            href="/allocations"
-                            aria-label="Allocations"
-                            title="Allocations"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          >
-                            Allocations
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="/core-team"
-                            aria-label="Core team"
-                            title="Core team"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          >
-                            Core team
-                          </a>
-                        </li>
-                        <li>
-                          <span
-                            aria-label="Committees"
-                            title="Committees"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          >
-                            <Dropdown title="Committees" customStyle={isMenuOpen && "left-110"} items={items}/>
-                          </span>
-                        </li>
-                        <li>
-                          <a
-                            href="/resources"
-                            aria-label="Resources"
-                            title="Resources"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          >
-                            Resources
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="/faq"
-                            aria-label="FAQ"
-                            title="FAQ"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          >
-                            FAQs
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="/contact"
-                            className="font-serif inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-gradient-to-r from-yellow-500 to-red-600 hover:shadow-2xl"
-                            aria-label="Contact"
-                            title="Contact"
-                          >
-                            Contact Us
-                          </a>
-                        </li>
+                      <li>
+                        <Link to="/about-us" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">About us</Link>
+                      </li>
+                      <li>
+                        <Link to="/core-team" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Core Team</Link>
+                      </li>
+                      <li>
+                        <Dropdown title="Committees" customStyle={isMenuOpen && "left-110"} items={items}/>
+                      </li>
+                      <li>
+                        <Link to="/allocations" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Allocations</Link>
+                      </li>
+                      <li>
+                        <Link to="/resources" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Resources</Link>
+                      </li>
+                      <li>
+                        <Link to="/faq" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">FAQ</Link>
+                      </li>
+                      <li>
+                        <Link to="/contact" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Contact</Link>
+                      </li>
                       </ul>
                     </nav>
                   </div>
