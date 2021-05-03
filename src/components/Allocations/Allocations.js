@@ -35,14 +35,14 @@ const Allocations = () => {
     return (
         <div>
             <Header email={email} setEmail={setEmail} findCommittee={findCommittee} />
-            {isShown && 
+            {/* {isShown && 
                 <div className="font-serif text-base text-gray-700 md:text-lg cont">
-                    <p>Coming soon...</p>
-                    {/* <br/>
-                    <Card comData={comData} /> */}
+                    <p>You have been allocated to:</p>
+                    <br/>
+                    <Card comData={comData} />
                 </div>
             }
-            {isErr && <Alert />}
+            {isErr && <Alert />} */}
         </div>
     )
 }
