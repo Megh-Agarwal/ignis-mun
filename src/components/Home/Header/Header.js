@@ -56,7 +56,7 @@ const Header = () => {
               <span className="text-5xl">Model United Nations 2021</span>
             </h2>
             <p className="text-2xl">
-              28th May | 30th May
+              28th May | 29th May | 30th May
             </p>
           </div>
           <div>

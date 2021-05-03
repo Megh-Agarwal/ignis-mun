@@ -6,7 +6,6 @@ const Resources = () => {
     return (
         <div>
             <Header />
-            <Resource />
         </div>
     )
 };
