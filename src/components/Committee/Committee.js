@@ -112,7 +112,11 @@ const Description = ({description}) => {
       {
         isShown ? description : reduce(description)
       }
-      <button className="text-blue-700 font-bold focus:outline-none hover:underline" onClick={() => setIsShown(!isShown)}>Hide</button>
+      <button className="text-blue-700 font-bold focus:outline-none hover:underline" onClick={() => setIsShown(!isShown)}>
+        {
+          isShown ? 'Hide' : 'Read More'
+        }
+      </button>
     </p>
   )
 }

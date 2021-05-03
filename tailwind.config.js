@@ -1,6 +1,9 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+  boxShadow: {
+    '2xl': '0 10px 50px rgba(0, 0, 0, 0.5)',
+  },
   theme: {
     extend: {
       fontFamily: {
