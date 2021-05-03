@@ -20,7 +20,7 @@ const Nav = () => {
                 <Link to="/core-team" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Core Team</Link>
               </li>
               <li>
-                <Dropdown title="Committees" items={items}/>
+                <Dropdown title="Committees" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600" items={items}/>
               </li>
             </ul>
             <a
