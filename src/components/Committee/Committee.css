@@ -53,17 +53,26 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   margin-top:20px;
 }
 
+.chair {
+  width: 35ch;
+}
+
+/* .chair .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 
 .chair img {
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 50%;  
 }
 
 @media screen and (max-width: 1165px) {

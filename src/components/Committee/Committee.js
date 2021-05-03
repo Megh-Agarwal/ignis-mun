@@ -44,16 +44,24 @@ const Committee = () => {
 
             <br/>
   
-            <Description description={data.description} /><br/>
+            <Description description={data.description} chars={400} style={{backgroundColor:'black'}} /><br/>
   
             <p style={{fontSize:'14pt'}} className="font-serif">
-              <u>Agenda</u> - <span className="font-serif text-base md:text-lg text-gray-700">{ data.agenda }</span>
+              <u>Agenda</u> - <span className="font-serif text-base md:text-lg text-gray-800">{ data.agenda }</span>
             </p>
-  
+            
+            <br/>
+
+            <h4 style={{ fontSize: '14pt' }} className="font-serif" ><u>Agenda description</u></h4>
+
+            <p className="font-serif text-base md:text-lg text-gray-800">
+              {data.agendaWriteup}
+            </p>
+
             <div className="resources font-serif">
               <h4 style={{ fontSize: '14pt' }} className="font-serif" ><u>Downloads</u></h4>
               
-              <div className="com-btn-grp text-gray-700">
+              <div className="com-btn-grp text-gray-800">
                 {/* <button className="mx-2 my-2 com-btn">
                   <img width="40px" className="py-2" src={pdfSvg}/>
                   <span>Study guide</span>
@@ -66,20 +74,21 @@ const Committee = () => {
               </div>
   
             </div>
-            
-            <br/>
-  
-            <h4 style={{ fontSize: '14pt' }} className="font-serif" ><u>The Executive Board</u></h4>
-            <div className="main">
-              {console.log(data)}
-              {
-                data.main.map((main, i) => <Chair key={i} main={main} />)
-              }
-            </div>
           </div>
   
           <div className="committee-logo">
-            <img width="300px" src={img}/>
+            <img width="300px" src={data.logo}/>
+          </div>
+        </div>
+        <div>
+          <h4 style={{ fontSize: '18pt' }} className="font-serif text-center" >The Executive Board</h4>
+
+          <div className="main">
+
+            {console.log(data)}
+            {
+              data.main.map((main, i) => <Chair key={i} main={main} />)
+            }
           </div>
         </div>
       </div>
@@ -92,24 +101,38 @@ const Committee = () => {
 const Chair = ({main}) => {
   return (
     <div className="chair">
-      <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" />
-      <h4 style={{fontFamily:'Merriweather, serif', fontSize:'14pt', textDecoration:'underline'}}>{main.position}</h4>
-      <h4 className="inline-block font-serif text-base md:text-lg">{main.name}</h4>
+      <div className="flex justify-center image-container">
+        <img src={main.image} />
+      </div>
+      <h4 
+        style={{
+          fontFamily:'Merriweather, serif', 
+          fontSize:'16pt', 
+          textDecoration:'underline',
+          textAlign:'center'
+        }}
+      >
+        {main.position}
+      </h4>
+      <h4 className="font-serif text-base md:text-lg text-center">{main.name}</h4>
+      <p className="font-serif text-base md:text-lg text-gray-800">
+        <Description description={main.description} chars={200}/>
+      </p>
     </div>
   )
 }
 
-const Description = ({description}) => {
+const Description = ({description, chars}) => {
   const [isShown, setIsShown] = useState(false);
 
   function reduce(desc) {
-    const descArr = desc.substr(0, 500).split(' ');
+    const descArr = desc.substr(0, chars).split(' ');
     descArr.pop();
     return descArr.join(' ') + '... ';
   }
 
   return (
-    <p className="font-serif text-base md:text-lg text-gray-700">
+    <p className="font-serif text-base md:text-lg text-gray-800">
       {
         isShown ? description : reduce(description)
       }
