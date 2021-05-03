@@ -37,9 +37,9 @@ const Allocations = () => {
             <Header email={email} setEmail={setEmail} findCommittee={findCommittee} />
             {isShown && 
                 <div className="font-serif text-base text-gray-700 md:text-lg cont">
-                    <p>You have been allocated to:</p>
-                    <br/>
-                    <Card comData={comData} />
+                    <p>Coming soon...</p>
+                    {/* <br/>
+                    <Card comData={comData} /> */}
                 </div>
             }
             {isErr && <Alert />}

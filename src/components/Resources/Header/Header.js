@@ -50,8 +50,7 @@ const Header = () => {
               Resources
             </h2>
             <p className="text-base text-gray-700 md:text-lg">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque rem aperiam, eaque ipsa quae.
+              Coming soon...
             </p>
           </div>
           <div>

@@ -35,40 +35,41 @@ const Committee = () => {
 
   else if (data !== {}) {
     return (
-      <>
+      <div>
         <div className="committee-container">
           <div className="text">
-  
             <b>
-              <h1 className="head" >{data.fullForm}({data.committee})</h1>
+              <h1 className="head font-serif">{data.fullForm}({data.committee})</h1>
             </b>
+
             <br/>
   
             <Description description={data.description} /><br/>
   
-            <p style={{fontFamily:'Merriweather, serif', fontSize:'14pt'}}>
-              <u>Agenda</u> - <span className="font-serif text-base md:text-lg">{ data.agenda }</span>
+            <p style={{fontSize:'14pt'}} className="font-serif">
+              <u>Agenda</u> - <span className="font-serif text-base md:text-lg text-gray-700">{ data.agenda }</span>
             </p>
   
-            <div className="resources">
-              <h4 style={{ fontFamily: 'Merriweather, serif', fontSize: '14pt' }} ><u>Downloads</u></h4>
+            <div className="resources font-serif">
+              <h4 style={{ fontSize: '14pt' }} className="font-serif" ><u>Downloads</u></h4>
               
-              <div className="com-btn-grp">
-                <button className="mx-2 my-2 com-btn">
+              <div className="com-btn-grp text-gray-700">
+                {/* <button className="mx-2 my-2 com-btn">
                   <img width="40px" className="py-2" src={pdfSvg}/>
                   <span>Study guide</span>
                 </button>
   
                 <button className="mx-2 my-2 com-btn">
-                  {/* <i style={{fontSize:'25pt', padding:'5px'}} class="fas fa-file-pdf"></i> */}
                   <img width="40px" className="py-2" src={pdfSvg}/>
                   <span>Committee Brief</span>
-                </button>
+                </button> */} Coming soon...
               </div>
   
-            </div><br/>
+            </div>
+            
+            <br/>
   
-            <h4 style={{ fontFamily: 'Merriweather, serif', fontSize: '14pt' }} ><u>The Executive Board</u></h4>
+            <h4 style={{ fontSize: '14pt' }} className="font-serif" ><u>The Executive Board</u></h4>
             <div className="main">
               {console.log(data)}
               {
@@ -81,7 +82,7 @@ const Committee = () => {
             <img width="300px" src={img}/>
           </div>
         </div>
-      </>
+      </div>
     );
   } else {
     return 'Loading'
@@ -104,15 +105,15 @@ const Description = ({description}) => {
   function reduce(desc) {
     const descArr = desc.substr(0, 500).split(' ');
     descArr.pop();
-    return descArr.join(' ') + '...';
+    return descArr.join(' ') + '... ';
   }
 
   return (
-    <p className="font-serif text-base md:text-lg">
+    <p className="font-serif text-base md:text-lg text-gray-700">
       {
         isShown ? description : reduce(description)
       }
-      <button className="text-blue-700 font-bold focus:outline-none hover:underline" onClick={() => setIsShown(!isShown)}>Hide</button>
+      <button className="text-blue-700 font-serif focus:outline-none hover:underline" onClick={() => setIsShown(!isShown)}>{isShown ? "Hide" : "Show"}</button>
     </p>
   )
 }

@@ -2,6 +2,54 @@ import React, { useState } from 'react';
 import Item from '../Item/Item';
 
 const Main = () => {
+
+    const FAQs = [{
+        "title": "Who can take part?",
+        "answer": "Anyone below the age of 18 can take part, this Model United Nations is open to all age categories till the 12th Grade i.e., 18 years of age.",
+    }, {
+        "title": "How long is the MUN?",
+        "answer": "It is a three-day MUN, and an approximate of 6-7 hours each day.",
+    }, {
+        "title": "What Rules of Procedure will the MUN follow?",
+        "answer": "UNA-USA Rules of Procedure.",
+    }, {
+        "title": "What is a Night Crisis Committee?",
+        "answer": "A Night Crisis Committee is a simulation which will take place at the end of the second day of the conference at 09:00 PM and will be chaired by the Secretary General, who will select the top 3 performers across all seven committees on the basis of their performance on Day 1 and Day 2. These 21 delegates will be given an agenda and a delegation 2 hours prior. The NCC will follow standard UNA-USA rules of procedure, the committee will be informed in case of any alteration in procedure.",
+    }, {
+        "title": "What platform is the conference using?",
+        "answer": "The IGNISMUN E-Conference will be conducted online using Zoom to ensure that delegates have the best experience during the conference and can collaborate using it’s a multitude of tools and features embedded in the software.",
+    }, {
+        "title": "What material am I allowed to carry?",
+        "answer": "You are allowed access to unlimited, pre-researched offline material in the duration of a moderated caucus. You can choose to either have hard copies of the same or as downloaded documents on your laptop or tablet. However, you are only allowed internet access for research during an unmoderated caucus. You may choose to carry a pen and a notebook for note-taking.",
+    }, {
+        "title": "Will I get a certificate?",
+        "answer": "All delegates will receive participation certificates upon attendance on all three days of the conference. Additionally, there will be certificates awarded for Best Delegate, High Commendation, and Special Mention for each committee.",
+    }, {
+        "title": "Is there a delegate fee?",
+        "answer": "There is a 400 Rupee delegate fee for IGNISMUN 2021.",
+    }, {
+        "title": "Are there any prizes for winners?",
+        "answer": "The best delegate across all 7 committees will be rewarded with a 1,500 Rupee cash prize and a certificate.",
+    }, {
+        "title": "What is the difference between a moderated caucus and an unmoderated caucus?",
+        "answer": "A Moderated Caucus is a debate format that allows delegates to make short comments on a specific sub-topic, while an Unmoderated Caucus (also called Informal Caucus or Lobbying Sessions) is a debate format in which delegates can leave their seats to go and talk to others freely and informally.",
+    }, {
+        "title": "Can I choose my committee/country?",
+        "answer": "Your preferences for both countries and committees will be recorded. The board will consider your preferences, however, their decision on your delegation would be final.",
+    }, {
+        "title": "How can I prepare?",
+        "answer": "Firstly, make sure to thoroughly research about your country and the committee’s agenda. There are multiple helpful resources to use for preparation on the Internet. You can also find the committee agendas and additional resources on this website. Furthermore, the board will be hosting a training session for all delegates.",
+    }, {
+        "title": "Are there going to be training sessions for the first-time delegates?",
+        "answer": "Yes, there are two training sessions scheduled wherein, the Rules of Procedure along with some other details like how to research, how to write a speech, etc, will be explained thoroughly.",
+    }, {
+        "title": "Is there a dress code?",
+        "answer": "The dress code for MUN Conferences is Western Formal. One will be expected to dress in suits (if male) or in equally formal clothing (if female). The minimum requirement at a conference is to wear a pair of formal pants, a shirt, and a blazer.",
+    }, {
+        "title": "Who will be monitoring the delegates?",
+        "answer": "The Executive Board and the Secretariat will be monitoring and helping the delegates at all times. Each committee has a team consisting of the Chairpersons and two Vice-Chairpersons, who will also be monitoring the delegates.",
+    }]
+
     return (
         <div>
             <div class="font-serif px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -51,29 +99,19 @@ const Main = () => {
                                     </svg>
                                     <span class="relative">Frequently</span>
                                 </span>{' '}
-              asked questions
-            </h2>
+                            asked questions
+                            </h2>
                             <p class="text-base text-gray-700 md:text-lg">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                accusantium doloremque rem aperiam, eaque ipsa quae.
-            </p>
+                                Get some of your questions cleared through the FAQs!
+                            </p>
                         </div>
                     </div>
                     <div class="space-y-4">
-                        <Item title="Who can take part?">
-                            Answer: Since the Podar MUN E-Conference is an intraMUN, it will be open to all IBDP1 and AS Levels students of Podar International School, Santacruz.
-                        </Item>
-                        <Item title="What platform is the conference using?">
-                            Answer: The Podar MUN E-Conference will be conducted online using Microsoft Teams to ensure that delegates have the best experience during the conference and can collaborate using it’s a multitude of tools and features embedded in the software.
-                        </Item>
-                        <Item title="Is the Space Pope reptilian!?">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque rem aperiam, eaque ipsa quae.
-                        </Item>
-                        <Item title="How much money you got on you?">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque rem aperiam, eaque ipsa quae.
-                        </Item>
+                        {FAQs.map(faq => {
+                            return <Item title={faq.title}>
+                                Answer: {faq.answer}
+                            </Item>
+                        })}
                     </div>
                 </div>
             </div>
