@@ -1,5 +1,5 @@
 import Header from './Header/Header';
-import Team from './Team/Team2';
+import Team from './Team/Team';
 
 const CoreTeam = () => {
     return (
