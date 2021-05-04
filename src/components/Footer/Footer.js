@@ -15,13 +15,13 @@ const Footer = () => {
             </a>
             <div className="font-serif mt-6 lg:max-w-sm">
               <p className="text-sm text-gray-800">
-                Pratinav Deb, Secretary General: 9820453504
-                Tanishka Mauskar, Head of Public Relations: 9930741280
+                Pratinav Deb, Secretary General: 9820453504 <br></br>
+                Tanishka Mauskar, Head of Public Relations: 9930741280 <br></br>
                 Jay Vaknalli, Head of Logistics: 95940 23311
               </p>
             </div>
           </div>
-          <div className="space-y-2 text-sm">
+          <div className="font-serif space-y-2 text-sm">
             <p className="text-base font-bold tracking-wide text-gray-900">
               Contacts
             </p>
@@ -38,7 +38,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <span className="text-base font-bold tracking-wide text-gray-900">
+            <span className="font-serif text-base font-bold tracking-wide text-gray-900">
               Social
             </span>
             <div className="flex items-center mt-1 space-x-3">
@@ -54,7 +54,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
+        <div className="font-serif flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
           <p className="text-sm text-gray-600 justify-center">
             28th May | 29th May | 30th May
           </p>

@@ -22,7 +22,7 @@ code {
 }
 
 hr { 
-    background: url('http://i.stack.imgur.com/37Aip.png') no-repeat top center;
+    background: url('https://ignismun.s3.ap-south-1.amazonaws.com/fire.png') no-repeat top center;
     background-size: contain;
     display: block;
     height: 18px;

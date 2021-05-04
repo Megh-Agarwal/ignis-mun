@@ -40,7 +40,7 @@ const Committee = () => {
 
   else if (data !== {}) {
     return (
-      <div>
+      <div className="container mx-auto">
         <div className="committee-container">
           <div className="text">
             <b>
@@ -84,6 +84,7 @@ const Committee = () => {
           <div className="committee-logo">
             <img width="300px" src={data.logo}/>
           </div>
+          <hr className="w-full my-8 m-5 border-gray-300" />
         </div>
         <div>
           <h4 style={{ fontSize: '18pt' }} className="font-serif text-center" >The Executive Board</h4>
@@ -105,7 +106,7 @@ const Committee = () => {
 
 const Chair = ({main}) => {
   return (
-    <div className="font-serif chair">
+    <div className="m-5 font-serif chair">
       <div className="flex text-justify justify-center image-container">
         <img src={main.image} />
       </div>
@@ -118,7 +119,7 @@ const Chair = ({main}) => {
       >
         {main.position}
       </h4>
-      <h4 className="font-serif text-base md:text-lg text-center">{main.name}</h4>
+      <h4 className="mb-2 font-serif text-base md:text-lg text-center">{main.name}</h4>
       <p className="font-serif text-base md:text-lg text-gray-800">
         <Description description={main.description} chars={200}/>
       </p>
