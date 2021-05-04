@@ -15,7 +15,7 @@ export const Team = () => {
     }
 
     useEffect(() => {
-        fetch("http://13.232.18.191/core-team")
+        fetch("http://13.232.18.191:5000/core-team")
             .then(res => res.json())
             .then(
                 (result) => {

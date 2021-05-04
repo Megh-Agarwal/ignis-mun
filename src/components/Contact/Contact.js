@@ -13,7 +13,7 @@ const Contact = () => {
 	function handleSubmit(e) {
 		e.preventDefault();
 		setAlertMsg('loading');
-		fetch('http://13.232.18.191/contact', {
+		fetch('http://13.232.18.191:5000/contact', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
