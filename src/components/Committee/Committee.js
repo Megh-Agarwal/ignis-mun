@@ -12,6 +12,11 @@ import Spinner from './Spinner'
 const Committee = () => {
   const { name } = useParams();
   const [data, setData] = useState(null);
+  const [comName, setComName] = useState(name);
+
+  if (name !== comName) {
+    window.location.reload();
+  }
 
   const getComData = () => {
     axios.get('http://13.232.18.191/committees/' + name)
