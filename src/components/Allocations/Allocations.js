@@ -17,7 +17,7 @@ const Allocations = () => {
         e.preventDefault();
         setIsErr(false);
         let com = null;
-        axios.get('http://13.232.18.191:5000/allocations/' + email)
+        axios.get('http://13.232.18.191/backend/allocations/' + email)
             .then(res => {
                 if (res.data.allocations.length !== 0) {
                     setComData(res.data.allocations[0].committee);
