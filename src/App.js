@@ -17,12 +17,13 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  HashRouter,
   Link
 } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Navigation />
         <Switch>
           <Route path="/" exact>
@@ -49,7 +50,7 @@ function App() {
           <Route exact path="/committee/:name" component={Committee} />
         </Switch>
       <Footer/>
-    </Router>
+    </HashRouter>
   );
 }
 

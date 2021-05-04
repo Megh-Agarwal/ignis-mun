@@ -13,13 +13,7 @@ const Footer = () => {
             >
              <img src={Logo} alt="Logo" height="300px" width="300px"/>
             </a>
-            <div className="font-serif mt-6 lg:max-w-sm">
-              <p className="text-sm text-gray-800">
-                Pratinav Deb, Secretary General: 9820453504 <br></br>
-                Tanishka Mauskar, Head of Public Relations: 9930741280 <br></br>
-                Jay Vaknalli, Head of Logistics: 95940 23311
-              </p>
-            </div>
+
           </div>
           <div className="font-serif space-y-2 text-sm">
             <p className="text-base font-bold tracking-wide text-gray-900">
@@ -34,6 +28,17 @@ const Footer = () => {
                 className="transition-colors duration-300 text-red-400 hover:text-orange-600"
               >
                 mun.ignis@gmail.com
+              </a>
+            </div>
+            <div className="flex">
+              <p className="mr-1 text-gray-800">Sec-General:</p>
+              <a
+                href="mailto:pratinavdeb4@gmail.com"
+                aria-label="Our email"
+                title="Our email"
+                className="transition-colors duration-300 text-red-400 hover:text-orange-600"
+              >
+                pratinavdeb4@gmail.com 
               </a>
             </div>
           </div>

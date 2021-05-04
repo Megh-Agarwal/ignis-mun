@@ -59,8 +59,11 @@ const Header = () => {
               28th May | 29th May | 30th May
             </p>
           </div>
+          <div className="mb-5">
+            <a href="https://forms.gle/q5p3uSeb1hR3PKQC8" className="font-serif inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-gradient-to-r from-yellow-500 to-red-600">Register</a>
+          </div>
           <div>
-            <Link to="/about-us" className="font-serif inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-gradient-to-r from-yellow-500 to-red-600">Learn more</Link>
+            <Link to="/about-us" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Learn more</Link>
           </div>
         </div>
       </div>
