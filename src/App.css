@@ -39,7 +39,7 @@
 
 .contact-container::before,
 .contact-container::after {
-  --angle: 3deg;
+  --angle: -3deg;
   content: '';
   position: absolute;
   height: 70vh;
@@ -47,6 +47,10 @@
   right: 0;
   left: 0;
   z-index: -1;
+  transform: skewY(var(--angle));
+  -webkit-transform: skewY(var(--angle));
+  -moz-transform: skewY(var(--angle));
+  -ms-transform: skewY(var(--angle));
   background-image: linear-gradient(to right, red , yellow);
 }
 
@@ -57,10 +61,31 @@
   }
 }
 
+.slant::before,
+.slant::after {
+  --angle: -3deg;
+  content: '';
+  position: absolute;
+  height: 50vh;
+  top: 150px;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  transform: skewY(var(--angle));
+  -webkit-transform: skewY(var(--angle));
+  -moz-transform: skewY(var(--angle));
+  -ms-transform: skewY(var(--angle));
+  background-image: linear-gradient(to right, red , yellow);
+}
 
 @media screen and (orientation: portrait) {
   .contact-container::before,
   .contact-container::after {
     height: 30%;
+  }
+
+  .slant::before,
+  .slant::after {
+    height: 30vh;
   }
 }

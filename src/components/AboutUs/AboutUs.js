@@ -1,8 +1,10 @@
 import Header from './Header/Header';
 
+import '../../App.css';
+
 const AboutUs = () => {
     return (
-        <div>
+        <div className="slant">
             <Header />
         </div>
     )

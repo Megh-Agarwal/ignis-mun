@@ -2,7 +2,7 @@ const AboutUsContent = () => {
     return (
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="mb-5 max-w-screen-sm sm:text-center sm:mx-auto">
-          <p className="text-base text-gray-700 md:text-lg sm:px-4 text-justify">
+          <p className="text-base text-gray-900 md:text-lg sm:px-4 text-justify">
             IGNIS MUN brings a brand new platform for student leaders across the country and beyond to debate, collaborate and, think critically about issues that resonate in a global context. It is brought about by a team of individuals with a collective experience of 250+ MUNs with thought-provoking agendas. 
 
             The secretariat has worked together on multiple past occasions and they promise to deliver an MUN with quality debate and fulfilling discussions. IGNIS MUN is designed for delegates from all debate backgrounds, experienced or first-time MUNers and promises to bring passionate debaters together to respond to global concerns. 

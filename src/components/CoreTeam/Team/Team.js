@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import { Dialog, Transition } from '@headlessui/react'
-//import { CheckIcon } from '@heroicons/react/outline'
+import { Dialog, Transition } from '@headlessui/react';
+
+import Spinner from '../../Committee/Spinner';
 
 export const Team = () => {
     const [error, setError] = useState(null);
@@ -31,7 +32,7 @@ export const Team = () => {
     if (error) {
         return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-        return <div>Loading...</div>;
+        return <Spinner/>;
     } else {
         return (
             <div className="font-serif">
@@ -139,9 +140,9 @@ export const Team = () => {
                     <div className="grid gap-10 mx-auto lg:grid-cols-2 lg:max-w-screen-lg">
                         {items.map(item => (
                             <div className="grid sm:grid-cols-3">
-                                <div className="relative w-full h-48 max-h-full rounded shadow sm:h-auto md:flex">
+                                <div className="relative w-full h-48 max-h-full sm:h-auto md:flex">
                                     <img
-                                        className="absolute object-scale-down w-full h-full rounded sm:flex-shrink-0"
+                                        className="absolute w-full h-full object-scale-down lg:object-cover rounded sm:flex-shrink-0"
                                         src={item.image}
                                         alt={item.name}
                                     />
