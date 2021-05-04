@@ -34,7 +34,7 @@ export const Team = () => {
         return <div>Loading...</div>;
     } else {
         return (
-            <>
+            <div className="font-serif">
                 <Transition.Root show={modalState.state === "success"} open={modalState.state === "success"} as={Fragment}>
                     <Dialog as="div" static className="fixed z-10 inset-0 overflow-y-auto" onClose={() => {
                         setModalState(false);
@@ -67,7 +67,7 @@ export const Team = () => {
                                     <div className="mt-5 sm:mt-6">
                                         <button
                                             type="button"
-                                            className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
+                                            className="inline-flex justify-center w-full rounded-md shadow-sm px-4 py-2 text-base font-medium text-white bg-gradient-to-r from-yellow-500 to-red-600 sm:text-sm"
                                             onClick={() => {
                                                 setModalState(false);
                                             }}
@@ -82,7 +82,7 @@ export const Team = () => {
                 </Transition.Root>
                 <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                     <div className="mx-auto mb-10 lg:max-w-xl sm:text-center">
-                        <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+                        <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-white uppercase rounded-full bg-gradient-to-r from-yellow-500 to-red-600">
                             Core Team
                         </p>
                         <p className="text-base text-gray-700 md:text-lg">
@@ -92,9 +92,9 @@ export const Team = () => {
                     <div className="grid gap-10 mx-auto lg:grid-cols-2 lg:max-w-screen-lg">
                         {items.map(item => (
                             <div className="grid sm:grid-cols-3">
-                                <div className="relative w-full h-48 max-h-full rounded shadow sm:h-auto">
+                                <div className="relative w-full h-48 max-h-full rounded shadow sm:h-auto md:flex">
                                     <img
-                                        className="absolute object-cover w-full h-full rounded object-center"
+                                        className="absolute object-cover w-full h-full rounded object-center sm:flex-shrink-0"
                                         src={item.image}
                                         alt={item.name}
                                     />
@@ -105,7 +105,7 @@ export const Team = () => {
                                     <p className="mb-4 text-sm tracking-wide text-gray-800">
                                         {item.testimonial.split('. ')[0]}...<br></br><br></br><button
                                             type="button"
-                                            className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
+                                            className="inline-flex justify-center w-full rounded-md shadow-sm px-4 py-2 text-base font-medium text-white bg-gradient-to-r from-yellow-500 to-red-600 sm:text-sm"
                                             onClick={() => {
                                                 showSuccess(item.testimonial);
                                             }}
@@ -126,7 +126,7 @@ export const Team = () => {
                         ))}
                     </div>
                 </div>
-            </>
+            </div>
         );
     }
 };
