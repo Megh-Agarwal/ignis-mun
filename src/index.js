@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import DocumentMeta from 'react-document-meta';
+// import DocumentMeta from 'react-document-meta';
 
 // const meta = {
 //   title: 'IGNIS Model United Nations',
