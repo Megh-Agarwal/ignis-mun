@@ -22,21 +22,21 @@ const Nav = () => {
           <img width="150" src={img} alt="Logo" className="object-contain" height="200px" width="200px" />
           </a>
           <ul class="font-serif flex items-center hidden space-x-8 lg:flex">
-            <Link to="/about-us" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">About us</Link>
+            <Link to="/about-us" className="font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">About us</Link>
             <li>
-              <Dropdown title="Committees" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600" items={items}/>
+              <Dropdown title="Committees" className="font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600" items={items}/>
             </li>
             <li>
-              <Link to="/allocations" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Allocations</Link>
+              <Link to="/allocations" className="font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Allocations</Link>
             </li>
             <li>
-              <Link to="/resources" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Resources</Link>
+              <Link to="/resources" className="font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Resources</Link>
             </li>
             <li>
-              <Link to="/faq" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">FAQ</Link>
+              <Link to="/faq" className="font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">FAQ</Link>
             </li>
             <li>
-              <Link to="/contact" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Contact</Link>
+              <Link to="/contact" className="font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Contact</Link>
             </li>
           </ul>
           <ul class="flex items-center hidden space-x-8 lg:flex">

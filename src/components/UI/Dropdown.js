@@ -31,7 +31,7 @@ const Dropdown = (props) => {
             {({ open }) => (
                 <>
                 <div>
-                    <Menu.Button className="inline-flex justify-start w-full bg-white text-m font-medium text-gray-700">
+                    <Menu.Button className="inline-flex transition-colors duration-200 hover:text-orange-600 justify-start w-full bg-white text-m text-xl font-medium text-gray-700">
                         {props.title}
                     </Menu.Button>
                 </div>

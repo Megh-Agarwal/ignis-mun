@@ -1,8 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 
-import EC from '../../EC/EC';
-import Spinner from '../../Committee/Spinner';
+import Spinner from '../Committee/Spinner';
 
 export const Team = () => {
     const [error, setError] = useState(null);
@@ -16,12 +15,12 @@ export const Team = () => {
     }
 
     useEffect(() => {
-        fetch("https://ignismun.in/backend/core-team")
+        fetch("https://ignismun.in/backend/extended-oc")
             .then(res => res.json())
             .then(
                 (result) => {
                     setIsLoaded(true);
-                    setItems(result.team);
+                    setItems(result.extended);
                 },
                 (error) => {
                     setIsLoaded(true);
@@ -29,10 +28,6 @@ export const Team = () => {
                 }
             )
     }, [])
-
-    function getCoreTeam() {
-        
-    }
 
     if (error) {
         return <div>Error: {error.message}</div>;
@@ -130,13 +125,9 @@ export const Team = () => {
                                     height="24"
                                 />
                                 </svg>
-                                <span className="relative">Our</span>
                             </span>{' '}
-                            Core team
+                            Extended Organizing Committee
                             </h2>
-                            <p className="text-base text-gray-700 md:text-lg">
-                                Meet our talented team!
-                            </p>
                             <hr className="w-full my-8 border-gray-300" />
                         </div>
                     <div>
@@ -182,7 +173,6 @@ export const Team = () => {
                         ))}
                     </div>
                 </div>
-                <EC/>
             </div>
         );
     }
