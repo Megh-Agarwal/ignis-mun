@@ -59,11 +59,11 @@ const Header = () => {
                     height="24"
                   />
                 </svg>
-                <span className="relative">About</span>
+                <span className="relative text-white">About</span>
               </span>{' '}
-              <span className="text-5xl">us</span>
+              <span className="text-5xl text-white">us</span>
             </h2>
-            <p className="text-2xl">
+            <p className="text-2xl text-white">
               Learn more about us
             </p>
             <AboutUsContent />
