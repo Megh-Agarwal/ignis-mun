@@ -59,7 +59,7 @@ const Committee = () => {
 
             <h4 style={{ fontSize: '14pt' }} className="font-serif" ><u>Agenda description</u></h4>
 
-            <p className="font-serif text-base md:text-lg text-gray-800">
+            <p className="text-justify font-serif text-base md:text-lg text-gray-800">
               {data.agendaWriteup}
             </p>
 
@@ -105,13 +105,12 @@ const Committee = () => {
 
 const Chair = ({main}) => {
   return (
-    <div className="chair">
-      <div className="flex justify-center image-container">
+    <div className="font-serif chair">
+      <div className="flex text-justify justify-center image-container">
         <img src={main.image} />
       </div>
-      <h4 
+      <h4 className="m-3" 
         style={{
-          fontFamily:'Merriweather, serif', 
           fontSize:'16pt', 
           textDecoration:'underline',
           textAlign:'center'
@@ -137,7 +136,7 @@ const Description = ({description, chars}) => {
   }
 
   return (
-    <p className="font-serif text-base md:text-lg text-gray-800">
+    <p className="text-justify font-serif text-base md:text-lg text-gray-800">
       {
         isShown ? description : reduce(description)
       }

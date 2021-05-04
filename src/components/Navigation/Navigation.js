@@ -22,6 +22,9 @@ const Nav = () => {
               <li>
                 <Dropdown title="Committees" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600" items={items}/>
               </li>
+              <li>
+                <Link to="/allocations" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Allocations</Link>
+              </li>
             </ul>
             <a
               href="/"
@@ -33,9 +36,6 @@ const Nav = () => {
             </a>
             <ul className="flex items-center hidden space-x-8 lg:flex">
               <li>
-                <Link to="/allocations" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Allocations</Link>
-              </li>
-              <li>
                 <Link to="/resources" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Resources</Link>
               </li>
               <li>
@@ -43,6 +43,9 @@ const Nav = () => {
               </li>
               <li>
                 <Link to="/contact" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Contact</Link>
+              </li>
+              <li>
+                <a href="https://forms.gle/q5p3uSeb1hR3PKQC8" target="_blank" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Register</a>
               </li>
             </ul>
             <div className="lg:hidden">
@@ -137,6 +140,9 @@ const Nav = () => {
                       </li>
                       <li>
                         <Link to="/contact" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Contact</Link>
+                      </li>
+                      <li>
+                        <a href="https://forms.gle/q5p3uSeb1hR3PKQC8" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Register</a>
                       </li>
                       </ul>
                     </nav>
