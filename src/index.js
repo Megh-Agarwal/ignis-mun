@@ -6,17 +6,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import DocumentMeta from 'react-document-meta';
 
-const meta = {
-  title: 'IGNIS Model United Nations',
-  description: 'IGNIS MUN brings a brand new platform for student leaders across the country.',
-  canonical: 'https://ignismun.in/',
-  meta: {
-    charset: 'utf-8',
-    name: {
-      keywords: 'ignis,mun,ignismun,ignis model united nations'
-    }
-  }
-};
+// const meta = {
+//   title: 'IGNIS Model United Nations',
+//   description: 'IGNIS MUN brings a brand new platform for student leaders across the country.',
+//   canonical: 'https://ignismun.in/',
+//   meta: {
+//     charset: 'utf-8',
+//     name: {
+//       keywords: 'ignis,mun,ignismun,ignis model united nations'
+//     }
+//   }
+// };
 
 const client = new QueryClient({
   defaultOptions: {
@@ -29,9 +29,9 @@ const client = new QueryClient({
 ReactDOM.render(
   <React.StrictMode>
     <QueryClientProvider client={client}>
-      <DocumentMeta {...meta}>
+      {/* <DocumentMeta {...meta}> */}
           <App />
-      </DocumentMeta>
+      {/* </DocumentMeta> */}
     </QueryClientProvider>,
   </React.StrictMode>,
   document.getElementById('root')
