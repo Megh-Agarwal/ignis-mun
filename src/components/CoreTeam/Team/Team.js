@@ -21,6 +21,19 @@ export const Team = () => {
             .then(
                 (result) => {
                     setIsLoaded(true);
+                    // convert the json object into array
+                    // var items = [];
+                    // console.log(result.team)
+                    // for (var i in result.team) {
+                    //     items.push(result.team[i])
+                    // }
+
+                    // // get the value from the array and apply the string manipulation
+                    // var a = items[0].testimonial;
+                    // items[0].testimonial = a.replace("\\n", "\r");
+
+                    // result.team[0] = items[0]
+                    // console.log(result.team);
                     setItems(result.team);
                 },
                 (error) => {

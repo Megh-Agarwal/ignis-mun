@@ -41,6 +41,12 @@ const Footer = () => {
                 pratinavdeb4@gmail.com 
               </a>
             </div>
+            <div className="flex">
+              <p className="mr-1 text-gray-800">Tanishka Mauskar, Head of Public Relations: <strong>9930741280</strong></p>
+            </div>
+            <div className="flex">
+              <p className="mr-1 text-gray-800">Jay Vaknalli, Head of Logistics: <strong>9594023311</strong></p>
+            </div>
           </div>
           <div>
             <span className="font-serif text-base font-bold tracking-wide text-gray-900">
