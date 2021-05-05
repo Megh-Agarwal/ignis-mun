@@ -101,7 +101,7 @@ const Main = () => {
                                 </span>{' '}
                             asked questions
                             </h2>
-                            <p class="text-base text-gray-700 md:text-lg">
+                            <p class="text-base text-gray-700 md:text-md">
                                 Get some of your questions cleared through the FAQs!
                             </p>
                         </div>
