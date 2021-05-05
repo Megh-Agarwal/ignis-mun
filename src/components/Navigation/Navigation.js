@@ -22,7 +22,9 @@ const Nav = () => {
           <img width="150" src={img} alt="Logo" className="object-contain" height="200px" width="200px" />
           </a>
           <ul class="font-serif flex items-center hidden space-x-8 lg:flex">
-            <Link to="/about-us" className="font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">About us</Link>
+            <li>
+              <Link to="/about-us" className="font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">About us</Link>
+            </li>
             <li>
               <Dropdown title="Committees" className="font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600" items={items}/>
             </li>
@@ -78,31 +80,14 @@ const Nav = () => {
                 <div class="p-5 bg-white border rounded shadow-sm">
                   <div class="flex items-center justify-between mb-4">
                     <div>
-                      <a
-                        href="/"
-                        aria-label="Company"
-                        title="Company"
-                        class="inline-flex items-center"
-                      >
-                        <svg
-                          class="w-8 text-deep-purple-accent-400"
-                          viewBox="0 0 24 24"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeMiterlimit="10"
-                          stroke="currentColor"
-                          fill="none"
-                        >
-                          <rect x="3" y="1" width="7" height="12" />
-                          <rect x="3" y="17" width="7" height="6" />
-                          <rect x="14" y="1" width="7" height="6" />
-                          <rect x="14" y="11" width="7" height="12" />
-                        </svg>
-                        <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                          Company
-                        </span>
-                      </a>
+                    <a
+                      href="/"
+                      aria-label="IGNIS-MUN"
+                      title="IGNIS-MUN"
+                      className="inline-flex items-center"
+                    >
+                    <img width="150" src={img} alt="Logo" className="object-contain" height="200px" width="200px" />
+                    </a>
                     </div>
                     <div>
                       <button
@@ -123,53 +108,31 @@ const Nav = () => {
                   <nav>
                     <ul class="space-y-4">
                       <li>
-                        <a
-                          href="/"
-                          aria-label="Our product"
-                          title="Our product"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                          Product
-                        </a>
+                        <Link to="/about-us" className="font-serif font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">About us</Link>
+                      </li>
+                      <li>
+                        <Dropdown title="Committees" className="font-serif font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600" items={items}/>
+                      </li>
+                      <li>
+                        <Link to="/allocations" className="font-serif font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Allocations</Link>
+                      </li>
+                      <li>
+                        <Link to="/resources" className="font-serif font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Resources</Link>
+                      </li>
+                      <li>
+                        <Link to="/faq" className="font-serif font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">FAQ</Link>
+                      </li>
+                      <li>
+                        <Link to="/contact" className="font-serif font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Contact</Link>
                       </li>
                       <li>
                         <a
-                          href="/"
-                          aria-label="Our product"
-                          title="Our product"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          href="https://forms.gle/q5p3uSeb1hR3PKQC8"
+                          class="inline-flex items-center justify-center h-12 px-6 font-serif tracking-wide text-white transition duration-200 rounded shadow-md bg-gradient-to-r from-yellow-500 to-red-600"
+                          aria-label="Register"
+                          title="Register"
                         >
-                          Features
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/"
-                          aria-label="Product pricing"
-                          title="Product pricing"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                          Pricing
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/"
-                          aria-label="About us"
-                          title="About us"
-                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                          About us
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/"
-                          class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                          aria-label="Sign up"
-                          title="Sign up"
-                        >
-                          Sign up
+                          Register
                         </a>
                       </li>
                     </ul>
