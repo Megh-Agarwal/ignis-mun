@@ -11,19 +11,24 @@ import Resources from './components/Resources/Resources'
 import Contact from './components/Contact/Contact';
 import Committee from "./components/Committee/Committee";
 import AboutUs from './components/AboutUs/AboutUs';
+import Error from './components/Error/Error';
 
 import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
+  useLocation,
+  Redirect,
   HashRouter,
   Link
 } from "react-router-dom";
 
+import browserHistory from "history/createBrowserHistory";
+
 function App() {
   return (
-    <HashRouter>
+    <Router history={browserHistory}>
       <Navigation />
         <Switch>
           <Route path="/" exact>
@@ -48,10 +53,29 @@ function App() {
             <AboutUs />
           </Route>
           <Route exact path="/committee/:name" component={Committee} />
+          <Route path="/*">
+            <NoMatch />
+          </Route>
         </Switch>
       <Footer/>
-    </HashRouter>
+    </Router>
   );
+}
+
+function NoMatch() {
+  let location = useLocation();
+  console.log(location);
+
+  var paths = ['/core-team', '/allocations', '/faq', '/resources', '/contact', '/about-us', '/committee'];
+
+  if(paths.includes(location.pathname)) {
+    <Redirect to={location.pathname} />
+  } else {
+    var message = `The page ${location.pathname} does not exist`;
+    return (
+      <Error info={message} />
+    );
+  }
 }
 
 export default App;
