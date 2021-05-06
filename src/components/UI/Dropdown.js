@@ -17,7 +17,7 @@ const Dropdown = (props) => {
                     to={`/committee/${item}`}
                     className={classNames(
                         active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                        'block px-4 py-2 text-sm'
+                        'block px-4 py-2 text-sm font-serif'
                     )}
                     >
                     {item}
@@ -31,7 +31,7 @@ const Dropdown = (props) => {
             {({ open }) => (
                 <>
                 <div>
-                    <Menu.Button className="inline-flex transition-colors duration-200 hover:text-orange-600 justify-start w-full bg-white text-m text-xl font-medium text-gray-700">
+                    <Menu.Button className="inline-flex font-serif focus:outline-none transition-colors duration-200 hover:text-orange-600 justify-start w-full bg-white text-m text-xl font-medium text-gray-700">
                         {props.title}
                     </Menu.Button>
                 </div>

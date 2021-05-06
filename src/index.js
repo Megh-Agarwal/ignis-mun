@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { QueryClient, QueryClientProvider } from 'react-query';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -18,21 +17,11 @@ import reportWebVitals from './reportWebVitals';
 //   }
 // };
 
-const client = new QueryClient({
-  defaultOptions: {
-    queries: {
-      refetchOnWindowFocus: false,
-    },
-  },
-});
-
 ReactDOM.render(
   <React.StrictMode>
-    <QueryClientProvider client={client}>
-      {/* <DocumentMeta {...meta}> */}
-          <App />
-      {/* </DocumentMeta> */}
-    </QueryClientProvider>,
+    {/* <DocumentMeta {...meta}> */}
+        <App />
+    {/* </DocumentMeta> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

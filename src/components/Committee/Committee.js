@@ -33,9 +33,30 @@ const Committee = () => {
     getComData()
   }, [])
 
+  // function comingSoon() {
+  //   if (data.description === "Coming soon") {
+
+  //   }
+  // }
 
   if(data == null){
     return <Spinner/>
+  }
+
+  else if (name === "NIGHT CRISIS") {
+    return (
+      <div 
+        className="font-serif"
+        style={{
+          position: "absolute",
+          transform: "translate(-50%,-50%)",
+          top: "50%",
+          left: "50%"
+        }}
+      >
+        Coming Soon
+      </div>
+    )
   }
 
   else if (data !== {}) {
@@ -44,7 +65,10 @@ const Committee = () => {
         <div className="committee-container">
           <div className="text">
             <b>
-              <h1 className="head font-serif">{data.fullForm}({data.committee})</h1>
+              <h1 className="head font-serif">
+                {data.fullForm}
+                { data.committee === "Night Crisis" ? null : `(${data.committee})` }
+              </h1>
             </b>
 
             <br/>

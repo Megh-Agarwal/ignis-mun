@@ -93,7 +93,7 @@ const Nav = () => {
                       <button
                         aria-label="Close Menu"
                         title="Close Menu"
-                        class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        class="absolute top-5 right-5 p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
@@ -128,7 +128,7 @@ const Nav = () => {
                       <li>
                         <a
                           href="https://forms.gle/q5p3uSeb1hR3PKQC8"
-                          class="inline-flex items-center justify-center h-12 px-6 font-serif tracking-wide text-white transition duration-200 rounded shadow-md bg-gradient-to-r from-yellow-500 to-red-600"
+                          class="inline-flex items-center w-full text-xl justify-center h-12 px-6 font-serif tracking-wide text-white transition duration-200 rounded shadow-md bg-gradient-to-r from-yellow-500 to-red-600"
                           aria-label="Register"
                           title="Register"
                         >
