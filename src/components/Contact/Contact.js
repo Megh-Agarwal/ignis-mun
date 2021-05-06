@@ -72,11 +72,12 @@ const Contact = () => {
         <div className="font-serif contact-container">
             <div className="flex flex-col justify-center py-6 sm:px-6 lg:px-8">
             <h2 className="mt-6 text-center text-3xl font-extrabold text-white">Contact Us</h2><br/>
-                {renderAlert()}
+                
 				<div className="mt-8 w-full sm:mx-auto sm:w-full sm:max-w-md">
                     <div className="bg-white lg:px-5 sm:mx-10 py-8 px-4 shadow sm:rounded-lg sm:px-10 shadow-2xl">
                         <form onSubmit={handleSubmit} className="space-y-6" action="#" method="POST">
-                            <div>
+							{renderAlert()}
+							<div>
                                 <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">
                                     Full name:
                                 </label>

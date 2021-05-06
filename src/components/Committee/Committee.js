@@ -46,13 +46,13 @@ const Committee = () => {
   else if (name === "NIGHT CRISIS") {
     return (
       <div 
-        className="font-serif"
-        style={{
-          position: "absolute",
-          transform: "translate(-50%,-50%)",
-          top: "50%",
-          left: "50%"
-        }}
+        className="font-serif text-center text-2xl py-40"
+        // style={{
+        //   position: "absolute",
+        //   transform: "translate(-50%,-50%)",
+        //   top: "50%",
+        //   left: "50%"
+        // }}
       >
         Coming Soon
       </div>
