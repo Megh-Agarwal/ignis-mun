@@ -50,7 +50,7 @@ const Header = () => {
               Resources
             </h2>
             <p className="text-base text-gray-700 md:text-lg">
-              Coming soon...
+              The study guides, as well as the rules of procedure have been provided to all delegates for reference.
             </p>
           </div>
           <div>

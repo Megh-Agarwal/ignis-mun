@@ -172,7 +172,7 @@ const SecGeneralAddress = () => {
           <br /><br />
           Thanks, and Best Wishes to all the delegates,
           <br />
-          Pratinav Deb
+          Pratinav Deb,
           Secretary General, IGNIS MUN 2021 <br></br><br></br>
           <a
             href="https://www.instagram.com/pratinavdeb/"

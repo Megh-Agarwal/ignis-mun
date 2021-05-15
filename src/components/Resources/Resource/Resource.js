@@ -1,3 +1,7 @@
+import {
+  Link
+} from "react-router-dom";
+
 const Resource = () => {
     return (
         <div className="font-serif bg-gray-100">
@@ -56,10 +60,9 @@ const Resource = () => {
                       />
                     </svg>
                   </div>
-                  <p className="mb-2 font-bold">Football Sports</p>
+                  <p className="mb-2 font-bold">Rules of procedure</p>
                   <p className="text-sm leading-5 text-gray-900">
-                    Sed ut perspiciatis unde omnis iste. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit.
+                    <a href="https://ignismun.s3.ap-south-1.amazonaws.com/IGNIS+MODEL+UNITED+NATIONS+RULES+OF+PROCEDURE.pdf" target="_blank">Click here to download the rules of procedure.</a>
                   </p>
                 </div>
                 <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-gradient-to-r from-yellow-500 to-red-600 group-hover:scale-x-100" />
@@ -81,10 +84,13 @@ const Resource = () => {
                       />
                     </svg>
                   </div>
-                  <p className="mb-2 font-bold">Bowling Sports</p>
+                  <p className="mb-2 font-bold">ALL INDIA POLITICAL PARTIES MEET</p>
                   <p className="text-sm leading-5 text-gray-900">
-                    Disrupt inspire and think tank, social entrepreneur but
-                    preliminary thinking think tank compelling.
+                    <a href="https://ignismun.s3.ap-south-1.amazonaws.com/STUDY+GUIDES/ALL+INDIA+POLITICAL+PARTIES+MEET.pdf" target="_blank">Click here to download the study guide.</a>
+                    <br></br>
+                    <Link to={`/committee/AIPPM`}>
+                      Click here for more information.
+                    </Link>
                   </p>
                 </div>
                 <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-gradient-to-r from-yellow-500 to-red-600 group-hover:scale-x-100" />
@@ -106,10 +112,13 @@ const Resource = () => {
                       />
                     </svg>
                   </div>
-                  <p className="mb-2 font-bold">Cycling Sports</p>
+                  <p className="mb-2 font-bold">CONTINUOUS CRISIS COMMITTEE</p>
                   <p className="text-sm leading-5 text-gray-900">
-                    A slice of heaven. O for awesome, this chocka full cuzzie is as
-                    rip-off as a cracker.
+                    <a href="https://ignismun.s3.ap-south-1.amazonaws.com/STUDY+GUIDES/CONTINUOUS+CRISIS+COMMITTEE.pdf" target="_blank">Click here to download the study guide.</a>
+                    <br></br>
+                    <Link to={`/committee/CCC`}>
+                      Click here for more information.
+                    </Link>
                   </p>
                 </div>
                 <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-gradient-to-r from-yellow-500 to-red-600 group-hover:scale-x-100" />
@@ -131,10 +140,13 @@ const Resource = () => {
                       />
                     </svg>
                   </div>
-                  <p className="mb-2 font-bold">Weight Lifting Sports</p>
+                  <p className="mb-2 font-bold">DISARMAMENT AND INTERNATIONAL SECURITY COMMITTEE</p>
                   <p className="text-sm leading-5 text-gray-900">
-                    Meanwhile, in behind the bicycle shed, Hercules Morse, as big as
-                    a horse.
+                    <a href="https://ignismun.s3.ap-south-1.amazonaws.com/STUDY+GUIDES/DISARMAMENT+AND+INTERNATIONAL+SECURITY+COMMITTEE.pdf" target="_blank">Click here to download the study guide.</a>
+                    <br></br>
+                    <Link to={`/committee/DISEC`}>
+                      Click here for more information.
+                    </Link>
                   </p>
                 </div>
                 <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-gradient-to-r from-yellow-500 to-red-600 group-hover:scale-x-100" />
@@ -156,10 +168,13 @@ const Resource = () => {
                       />
                     </svg>
                   </div>
-                  <p className="mb-2 font-bold">Golf Sports</p>
+                  <p className="mb-2 font-bold">ECONOMIC AND FINANCIAL AFFAIRS COUNCIL</p>
                   <p className="text-sm leading-5 text-gray-900">
-                    Disrupt inspire and think tank, social entrepreneur but
-                    preliminary thinking think tank compelling.
+                    <a href="https://ignismun.s3.ap-south-1.amazonaws.com/STUDY+GUIDES/ECONOMIC+AND+FINANCIAL+AFFAIRS+COUNCIL.pdf" target="_blank">Click here to download the study guide.</a>
+                    <br></br>
+                    <Link to={`/committee/ECOFIN`}>
+                      Click here for more information.
+                    </Link> 
                   </p>
                 </div>
                 <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-gradient-to-r from-yellow-500 to-red-600 group-hover:scale-x-100" />
@@ -181,10 +196,13 @@ const Resource = () => {
                       />
                     </svg>
                   </div>
-                  <p className="mb-2 font-bold">Hockey Sports</p>
+                  <p className="mb-2 font-bold">SOCIAL HUMANITARIAN AND CULTURAL COMMITTEE</p>
                   <p className="text-sm leading-5 text-gray-900">
-                    A business big enough that it could be listed on the NASDAQ goes
-                    belly up.
+                    <a href="https://ignismun.s3.ap-south-1.amazonaws.com/STUDY+GUIDES/SOCIAL+HUMANITARIAN+AND+CULTURAL+COMMITTEE.pdf" target="_blank">Click here to download the study guide.</a>
+                    <br></br>
+                    <Link to={`/committee/SOCHUM`}>
+                      Click here for more information.
+                    </Link>
                   </p>
                 </div>
                 <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-gradient-to-r from-yellow-500 to-red-600 group-hover:scale-x-100" />
@@ -206,10 +224,13 @@ const Resource = () => {
                       />
                     </svg>
                   </div>
-                  <p className="mb-2 font-bold">Shooting Sports</p>
+                  <p className="mb-2 font-bold">UNITED NATIONS OFFICE ON DRUGS AND CRIME</p>
                   <p className="text-sm leading-5 text-gray-900">
-                    Lookout flogging bilge rat main sheet bilge water nipper fluke
-                    to go on account heave down clap of thunder.
+                    <a href="https://ignismun.s3.ap-south-1.amazonaws.com/STUDY+GUIDES/UNITED+NATIONS+OFFICE+ON+DRUGS+AND+CRIME.pdf" target="_blank">Click here to download the study guide.</a>
+                    <br></br>
+                    <Link to={`/committee/UNODC`}>
+                      Click here for more information.
+                    </Link>
                   </p>
                 </div>
                 <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-gradient-to-r from-yellow-500 to-red-600 group-hover:scale-x-100" />
@@ -231,10 +252,13 @@ const Resource = () => {
                       />
                     </svg>
                   </div>
-                  <p className="mb-2 font-bold">Martial Arts</p>
+                  <p className="mb-2 font-bold">UNITED NATIONS WOMEN</p>
                   <p className="text-sm leading-5 text-gray-900">
-                    Webtwo ipsum orkut reddit meebo skype vimeo jajah spock empressr
-                    zimbra, mobly napster.
+                    <a href="https://ignismun.s3.ap-south-1.amazonaws.com/STUDY+GUIDES/UNITED+NATIONS+WOMEN.pdf" target="_blank">Click here to download the study guide.</a>
+                    <br></br>
+                    <Link to={`/committee/UNW`}>
+                      Click here for more information.
+                    </Link>
                   </p>
                 </div>
                 <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-gradient-to-r from-yellow-500 to-red-600 group-hover:scale-x-100" />
@@ -242,7 +266,7 @@ const Resource = () => {
             </div>
           </div>
         </div>
-      );
+    );
 };
 
 export default Resource
