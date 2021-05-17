@@ -91,15 +91,14 @@ const Committee = () => {
               <h4 style={{ fontSize: '14pt' }} className="font-serif" ><u>Downloads</u></h4>
               
               <div className="com-btn-grp text-gray-800">
-                {/* <button className="mx-2 my-2 com-btn">
-                  <img width="40px" className="py-2" src={pdfSvg}/>
-                  <span>Study guide</span>
-                </button>
-  
-                <button className="mx-2 my-2 com-btn">
-                  <img width="40px" className="py-2" src={pdfSvg}/>
-                  <span>Committee Brief</span>
-                </button> */} Coming soon...
+
+                  <a href={data.guide} target="_blank">
+                    <button className="mx-2 my-2 com-btn">
+                        <img width="40px" className="py-2" src={pdfSvg}/>
+                        <span>Study guide</span>
+                    </button>
+                  </a>
+
               </div>
   
             </div>
