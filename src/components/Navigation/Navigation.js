@@ -23,6 +23,9 @@ const Nav = () => {
           </a>
           <ul class="font-serif flex items-center hidden space-x-8 lg:flex">
             <li>
+              <Link to="/schedule" className="font-serif font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Schedule</Link>
+            </li>
+            <li>
               <Link to="/about-us" className="font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">About us</Link>
             </li>
             <li>
@@ -107,6 +110,9 @@ const Nav = () => {
                   </div>
                   <nav>
                     <ul class="space-y-4">
+                      <li>
+                        <Link to="/schedule" className="font-serif font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Schedule</Link>
+                      </li>
                       <li>
                         <Link to="/about-us" className="font-serif font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">About us</Link>
                       </li>

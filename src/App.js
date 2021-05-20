@@ -11,6 +11,7 @@ import Resources from './components/Resources/Resources'
 import Contact from './components/Contact/Contact';
 import Committee from "./components/Committee/Committee";
 import AboutUs from './components/AboutUs/AboutUs';
+import Schedule from './components/Schedule/Schedule';
 import Error from './components/Error/Error';
 
 import React from "react";
@@ -53,6 +54,9 @@ function App() {
             <AboutUs />
           </Route>
           <Route exact path="/committee/:name" component={Committee} />
+          <Route exact path="/schedule">
+            <Schedule />
+          </Route>
           <Route path="/*">
             <NoMatch />
           </Route>
@@ -66,7 +70,7 @@ function NoMatch() {
   let location = useLocation();
   console.log(location);
 
-  var paths = ['/core-team', '/allocations', '/faq', '/resources', '/contact', '/about-us', '/committee'];
+  var paths = ['/core-team', '/allocations', '/faq', '/resources', '/contact', '/about-us', '/committee', '/schedule'];
 
   if(paths.includes(location.pathname)) {
     <Redirect to={location.pathname} />

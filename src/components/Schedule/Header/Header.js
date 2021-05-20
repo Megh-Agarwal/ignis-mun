@@ -51,22 +51,13 @@ const Header = () => {
                     height="24"
                   />
                 </svg>
-                <span className="relative">Ignis</span>
+                <span className="relative">Schedule</span>
               </span>{' '}
-              <span className="text-5xl">Model United Nations 2021</span>
+              <span className="text-5xl">of the conference</span>
             </h2>
             <p className="text-2xl">
               28th May | 29th May | 30th May
             </p>
-          </div>
-          <div className="mb-8">
-            <p className="text-gray-700">Training sessions are organized on the 22nd and 24th of May, 6:30 PM onwards for all delegates to attend.</p>
-          </div>
-          <div className="mb-5">
-            <a href="https://forms.gle/q5p3uSeb1hR3PKQC8" className="font-serif inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-gradient-to-r from-yellow-500 to-red-600">Register</a>
-          </div>
-          <div>
-            <Link to="/about-us" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Learn more</Link>
           </div>
         </div>
       </div>
