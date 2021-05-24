@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 const Nav = () => {
-    const items = ["DISEC", "ECOFIN", "SOCHUM", "UNODC", "CCC", "UNW", "AIPPM", "NIGHT CRISIS"];
+    const items = ["DISEC", "ECOFIN", "SOCHUM", "UNODC", "CCC", "AIPPM", "NIGHT CRISIS"];
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (

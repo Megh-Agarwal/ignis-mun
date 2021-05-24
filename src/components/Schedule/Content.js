@@ -33,12 +33,8 @@ const Content = () => {
                 Day 1
               </h2>
               <p className="font-serif text-sm text-gray-700">
-                8:00 AM | Opening Ceremony <br></br>
-                9:00 AM - 11:00 AM | Committee session 1 <br></br>
-                11:00 AM - 11:30 AM | Break <br></br>
-                11:30 AM - 1:30 PM | Committee session 2 <br></br>
-                1:30 PM - 2:30 PM | Lunch Break <br></br>
-                2:30 PM - 4:30 PM | Committee session 3 <br></br>
+                3:30 PM - 4:30 PM | Opening Ceremony <br></br>
+                4:30 PM - 6:30 PM | Committee session 1 <br></br>
               </p>
             </div>
           </div>
@@ -68,12 +64,12 @@ const Content = () => {
                         Day 2
                     </h2>
                     <p className="font-serif text-sm text-gray-700">
-                        9:30 AM - 11:30 AM | Committee session 4 <br></br>
-                        11:30 AM - 12:30 PM | Break <br></br>
-                        12:00 PM - 2:00 PM | Committee session 5 <br></br>
+                        9:30 AM - 11:30 AM | Committee session 2 <br></br>
+                        11:30 AM - 12:00 PM | Break <br></br>
+                        12:00 PM - 2:00 PM | Committee session 3 <br></br>
                         2:00 PM - 3:00 PM | Lunch Break <br></br>
-                        3:00 PM - 4:30 PM | Committee session 6 <br></br>
-                        9:00 PM - 1:00 aM | NIGHT CRISIS COMMITTEE<br></br>
+                        3:00 PM - 4:30 PM | Committee session 4 <br></br>
+                        9:00 PM - 1:00 AM | NIGHT CRISIS COMMITTEE<br></br>
                     </p>
                     </div>
                 </div>
@@ -103,9 +99,9 @@ const Content = () => {
                 Day 3
               </h2>
               <p className="font-serif text-sm text-gray-700">
-                    9:30 AM - 11:30 AM | Committee session 7 <br></br>
-                    11:30 AM - 12:30 PM | Break <br></br>
-                    12:00 PM - 2:00 PM | Committee session 8 <br></br>
+                    9:30 AM - 11:30 AM | Committee session 5 <br></br>
+                    11:30 AM - 12:00 PM | Break <br></br>
+                    12:00 PM - 2:00 PM | Committee session 6 <br></br>
                     2:00 PM - 3:00 PM | Lunch Break <br></br>
                     3:00 PM onwards | Closing ceremony <br></br>
               </p>

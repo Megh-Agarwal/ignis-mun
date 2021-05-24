@@ -52,11 +52,11 @@ const Header = (props) => {
               Allocations
             </h2>
             <p className="text-base text-gray-700 md:text-lg">
-              {/* Enter your email and to check your committee allocation */} Coming soon...
+              Enter your email and to check your committee allocation.
             </p>
           </div>
           <div>
-          {/* <form onSubmit={props.findCommittee} className="flex flex-col items-center w-full mb-4 md:flex-row md:px-16 search-bar">
+          <form onSubmit={props.findCommittee} className="flex flex-col items-center w-full mb-4 md:flex-row md:px-16 search-bar">
             <input
               placeholder="Email"
               required
@@ -71,7 +71,7 @@ const Header = (props) => {
             >
               Search
             </button>
-          </form> */}
+          </form>
           </div>
         </div>
       </div>
