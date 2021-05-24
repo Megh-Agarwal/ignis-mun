@@ -39,7 +39,7 @@ const Allocations = () => {
         <div>
             <Header email={email} setEmail={setEmail} findCommittee={findCommittee} />
             {isShown && 
-                <div className="font-serif text-base text-gray-700 md:text-lg cont">
+                <div className="font-serif text-base text-gray-700 md:text-lg cont transform -translate-y-20 md:-translate-y-10 lg:transform-none">
                     <p className="m-5">You have been allocated to:</p>
                     <Card comData={comData} delegateData={delegateData}/>
                 </div>
