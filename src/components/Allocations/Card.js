@@ -7,14 +7,14 @@ const Card = (props) => {
   
   var aippm = <div>
       <p>
-          Delegation: ({ props.delegateData.delegation })
-          Party Name: ({ props.delegateData.pname })
+        Delegation: ({ props.delegateData.delegation }) 
+        Party Name: ({ props.delegateData.pname })
       </p>
   </div>
 
   var other = <div>
     <p>
-    <h4>Country</h4> { props.delegateData.country }
+      <h4>Country</h4> { props.delegateData.country }
     </p>
   </div>
 
@@ -29,15 +29,13 @@ const Card = (props) => {
             </h3>
             { props.comData.committee === "AIPPM" ? aippm : other}
           </div>
-          <button class="font-serif w-full btn bg-gradient-to-r from-yellow-500 to-red-600">
-            <Link to={`/committee/${props.comData.committee}`}>Read More <i className="fas fa-chevron-right"></i> </Link>
-          </button>
+          <Link to={`/committee/${props.comData.committee}`}>
+            <button class="font-serif w-full btn bg-gradient-to-r from-yellow-500 to-red-600">
+              Read More <i className="fas fa-chevron-right"></i> 
+            </button>
+          </Link>
         </div>
       </div>
-      <br/>
-      <button class="font-serif w-full btn bg-gradient-to-r from-yellow-500 to-red-600">
-        <Link to={`/committee/${props.comData.committee}`}>Read More <i className="fas fa-chevron-right"></i> </Link>
-      </button>
     </div>
   );
 }
