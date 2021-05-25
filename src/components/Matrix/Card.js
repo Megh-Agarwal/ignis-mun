@@ -2,7 +2,20 @@ import { Link } from 'react-router-dom'
 
 import './Matrix.css'
 
+const TH = ({ title }) => {
+  return (
+    <th
+      scope="col"
+      className="px-6 py-3 text-center text-lg font-medium text-gray-500 uppercase tracking-wider"
+    >
+      {title}
+    </th>
+  )
+}
+
 const Card = (props) => {
+  const committee = props.countryData[0].committee.committee;
+
   return (
     <div class="card">
         <div className="flex flex-col">
@@ -12,35 +25,14 @@ const Card = (props) => {
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  >
-                    Delegate
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  >
-                    Committee
-                  </th>
+                  <TH title="DELEGATE" />
+                  { committee === "AIPPM" ? <TH title="DELEGATION" /> : <TH title="COUNTRY" /> }
+                  { committee === "AIPPM" ? <TH title="PARTY" /> : null }
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
                 {props.countryData.map((delegate) => (
-                  <tr key={delegate.email}>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center ">
-                        <div className="ml-4">
-                          <div className="text-sm text-center font-medium text-gray-900">{delegate.name}</div>
-                          <div className="text-sm text-center text-gray-500">{delegate.email}</div>
-                        </div>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-900">{delegate.committee.committee}</div>
-                    </td>
-                  </tr>
+                  <TableRow delegate={delegate} />
                 ))}
               </tbody>
             </table>
@@ -51,5 +43,32 @@ const Card = (props) => {
     </div>
   );
 }
+
+function TableRow({ delegate }) {
+  const committee = delegate.committee.committee;
+  return (
+    <tr key={delegate.email}>
+      <td className="px-6 py-4">
+        <div className="">
+          <div className="ml-4">
+            <div className="text-sm text-center font-medium text-gray-900">{delegate.name}</div>
+            <div className="text-sm text-center text-gray-500">{delegate.email}</div>
+          </div>
+        </div>
+      </td>
+      <td className="px-6 py-4">
+        <div className="text-sm text-gray-900">
+          { committee === 'AIPPM' ? delegate.delegation : delegate.country }
+        </div>
+      </td>
+      <td className="px-6 py-4">
+        <div className="text-sm text-gray-900">
+        { committee === 'AIPPM' ? delegate.pname : null }
+        </div>
+      </td>
+    </tr>
+  )
+}
+
 
 export default Card

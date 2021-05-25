@@ -17,17 +17,22 @@ const Allocations = () => {
         e.preventDefault();
         setIsErr(false);
         let com = null;
-        axios.get('https://ignismun.in/backend/allocations/country/' + country)
+        axios.get('https://ignismun.in/backend/matrix/' + country.toUpperCase())
         .then(res => {
-            if (res.data.allocations.length !== 0) {
-                console.log(res.data)
-                setCountryData(res.data.allocations);
-                setIsShown(true);
-                com = true;
-            }
-
-            if (!com) {
-                setIsShown(false);
+            try {
+                if (res.data.allocations.length !== 0) {
+                    console.log(res.data)
+                    setCountryData(res.data.allocations);
+                    setIsShown(true);
+                    com = true;
+                }
+    
+                if (!com) {
+                    setIsShown(false);
+                    setIsErr(true)
+                }
+            } catch (e) {
+                setIsShown(false)
                 setIsErr(true)
             }
         })
