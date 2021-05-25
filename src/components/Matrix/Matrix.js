@@ -43,7 +43,7 @@ const Allocations = () => {
             <Header country={country} setCountry={setCountry} findCountry={findCountry} />
             {isShown && 
                 <div className="font-serif text-base text-gray-700 md:text-lg cont transform -translate-y-20 md:-translate-y-10 lg:transform-none">
-                    <p className="m-5">The country matrix is printed below:</p>
+                    <p className="m-5">The committee matrix is printed below:</p>
                     <Card countryData={countryData}/>
                 </div>
             }
