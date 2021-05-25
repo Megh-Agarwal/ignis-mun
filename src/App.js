@@ -12,6 +12,7 @@ import Contact from './components/Contact/Contact';
 import Committee from "./components/Committee/Committee";
 import AboutUs from './components/AboutUs/AboutUs';
 import Schedule from './components/Schedule/Schedule';
+import Matrix from './components/Matrix/Matrix';
 import Error from './components/Error/Error';
 
 import React from "react";
@@ -56,6 +57,9 @@ function App() {
           <Route exact path="/committee/:name" component={Committee} />
           <Route exact path="/schedule">
             <Schedule />
+          </Route>
+          <Route exact path="/matrix">
+            <Matrix />
           </Route>
           <Route path="/*">
             <NoMatch />

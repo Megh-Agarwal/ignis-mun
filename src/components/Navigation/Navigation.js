@@ -21,27 +21,30 @@ const Nav = () => {
           >
           <img width="150" src={img} alt="Logo" className="object-contain" height="200px" width="200px" />
           </a>
-          <ul class="font-serif flex items-center hidden space-x-8 lg:flex">
+          <ul class="text-base font-serif flex items-center hidden space-x-8 lg:flex">
             <li>
-              <Link to="/schedule" className="font-serif font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Schedule</Link>
+              <Link to="/matrix" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Matrix</Link>
             </li>
             <li>
-              <Link to="/about-us" className="font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">About us</Link>
+              <Link to="/schedule" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Schedule</Link>
             </li>
             <li>
-              <Dropdown title="Committees" className="font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600" items={items}/>
+              <Link to="/about-us" className="font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">About us</Link>
             </li>
             <li>
-              <Link to="/allocations" className="font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Allocations</Link>
+              <Dropdown title="Committees" className="font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600" items={items}/>
             </li>
             <li>
-              <Link to="/resources" className="font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Resources</Link>
+              <Link to="/allocations" className="font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Allocations</Link>
             </li>
             <li>
-              <Link to="/faq" className="font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">FAQ</Link>
+              <Link to="/resources" className="font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Resources</Link>
             </li>
             <li>
-              <Link to="/contact" className="font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Contact</Link>
+              <Link to="/faq" className="font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">FAQ</Link>
+            </li>
+            <li>
+              <Link to="/contact" className="font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Contact</Link>
             </li>
           </ul>
           <ul class="flex items-center hidden space-x-8 lg:flex">
@@ -111,30 +114,33 @@ const Nav = () => {
                   <nav>
                     <ul class="space-y-4">
                       <li>
-                        <Link to="/schedule" className="font-serif font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Schedule</Link>
+                        <Link to="/matrix" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Matrix</Link>
                       </li>
                       <li>
-                        <Link to="/about-us" className="font-serif font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">About us</Link>
+                        <Link to="/schedule" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Schedule</Link>
                       </li>
                       <li>
-                        <Dropdown title="Committees" className="font-serif font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600" items={items}/>
+                        <Link to="/about-us" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">About us</Link>
                       </li>
                       <li>
-                        <Link to="/allocations" className="font-serif font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Allocations</Link>
+                        <Dropdown title="Committees" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600" items={items}/>
                       </li>
                       <li>
-                        <Link to="/resources" className="font-serif font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Resources</Link>
+                        <Link to="/allocations" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Allocations</Link>
                       </li>
                       <li>
-                        <Link to="/faq" className="font-serif font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">FAQ</Link>
+                        <Link to="/resources" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Resources</Link>
                       </li>
                       <li>
-                        <Link to="/contact" className="font-serif font-medium text-xl tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Contact</Link>
+                        <Link to="/faq" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">FAQ</Link>
+                      </li>
+                      <li>
+                        <Link to="/contact" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Contact</Link>
                       </li>
                       <li>
                         <a
                           href="https://forms.gle/q5p3uSeb1hR3PKQC8"
-                          class="inline-flex items-center w-full text-xl justify-center h-12 px-6 font-serif tracking-wide text-white transition duration-200 rounded shadow-md bg-gradient-to-r from-yellow-500 to-red-600"
+                          class="inline-flex items-center w-full text-lg justify-center h-12 px-6 font-serif tracking-wide text-white transition duration-200 rounded shadow-md bg-gradient-to-r from-yellow-500 to-red-600"
                           aria-label="Register"
                           title="Register"
                         >
@@ -152,7 +158,7 @@ const Nav = () => {
     );
 
     // return (
-    //   <div className="font-serif text-xl z-40 relative px-4 py-6 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+    //   <div className="font-serif text-lg z-40 relative px-4 py-6 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
     //       <div className="relative flex items-center justify-between lg:justify-center lg:space-x-16">
     //         <ul className="flex items-center hidden space-x-8 lg:flex">
     //           <li>
@@ -239,7 +245,7 @@ const Nav = () => {
     //                         <rect x="14" y="1" width="7" height="6" />
     //                         <rect x="14" y="11" width="7" height="12" />
     //                       </svg> */}
-    //                       {/* <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+    //                       {/* <span className="ml-2 text-lg font-bold tracking-wide text-gray-800 uppercase">
     //                         Ignis MUN
     //                       </span> */}
     //                     </a>
