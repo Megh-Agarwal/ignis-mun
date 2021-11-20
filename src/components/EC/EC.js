@@ -15,7 +15,7 @@ export const Team = () => {
     }
 
     useEffect(() => {
-        fetch("http://localhost:9000/backend/extended-oc")
+        fetch("https://ignismun.in/backend/extended-oc")
             .then(res => res.json())
             .then(
                 (result) => {

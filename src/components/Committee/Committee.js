@@ -19,7 +19,7 @@ const Committee = () => {
   }
 
   const getComData = () => {
-    axios.get('http://localhost:9000/backend/committees/' + name)
+    axios.get('https://ignismun.in/backend/committees/' + name)
       .then(res => {
         console.log(res.data);
         console.log(res.data.committees)

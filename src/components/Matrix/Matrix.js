@@ -17,7 +17,7 @@ const Allocations = () => {
         e.preventDefault();
         setIsErr(false);
         let com = null;
-        axios.get('http://localhost:9000/backend/matrix/' + country.toUpperCase())
+        axios.get('https://ignismun.in/backend/matrix/' + country.toUpperCase())
         .then(res => {
             try {
                 if (res.data.allocations.length !== 0) {
