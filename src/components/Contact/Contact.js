@@ -13,7 +13,7 @@ const Contact = () => {
 	function handleSubmit(e) {
 		e.preventDefault();
 		setAlertMsg('loading');
-		fetch('https://ignismun.in/backend/contact', {
+		fetch('http://localhost:9000/backend/contact', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'

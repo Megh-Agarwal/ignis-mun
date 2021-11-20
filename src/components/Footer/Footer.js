@@ -128,7 +128,7 @@ const Footer = () => {
         </div>
         <div className="font-serif flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
           <p className="text-sm text-gray-600 justify-center">
-            28th May | 29th May | 30th May
+            17th Dec | 18th Dec | 19th Dec
           </p>
           </div>
       </div>

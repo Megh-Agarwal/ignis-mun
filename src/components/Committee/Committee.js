@@ -19,7 +19,7 @@ const Committee = () => {
   }
 
   const getComData = () => {
-    axios.get('https://ignismun.in/backend/committees/' + name)
+    axios.get('http://localhost:9000/backend/committees/' + name)
       .then(res => {
         console.log(res.data);
         console.log(res.data.committees)
@@ -87,7 +87,7 @@ const Committee = () => {
               {data.agendaWriteup}
             </p>
 
-            <div className="resources font-serif">
+            {/* <div className="resources font-serif">
               <h4 style={{ fontSize: '14pt' }} className="font-serif" ><u>Downloads</u></h4>
               
               <div className="com-btn-grp text-gray-800">
@@ -101,7 +101,7 @@ const Committee = () => {
 
               </div>
   
-            </div>
+            </div> */}
           </div>
   
           <div className="committee-logo">

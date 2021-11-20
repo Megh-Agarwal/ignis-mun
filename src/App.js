@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 import Navigation from './components/Navigation/Navigation';
@@ -21,9 +20,7 @@ import {
   Switch,
   Route,
   useLocation,
-  Redirect,
-  HashRouter,
-  Link
+  Redirect
 } from "react-router-dom";
 
 import browserHistory from "history/createBrowserHistory";
@@ -39,15 +36,15 @@ function App() {
           <Route path="/core-team" exact>
             <CoreTeam />
           </Route>
-          <Route path="/allocations" exact>
+          {/* <Route path="/allocations" exact>
             <Allocations />
-          </Route>
+          </Route> */}
           <Route path="/faq" exact>
             <FAQ />
           </Route>
-          <Route path="/resources" exact>
+          {/* <Route path="/resources" exact>
             <Resources />
-          </Route>
+          </Route> */}
           <Route path="/contact" exact>
             <Contact />
           </Route>
@@ -55,12 +52,12 @@ function App() {
             <AboutUs />
           </Route>
           <Route exact path="/committee/:name" component={Committee} />
-          <Route exact path="/schedule">
+          {/* <Route exact path="/schedule">
             <Schedule />
-          </Route>
-          <Route exact path="/matrix">
+          </Route> */}
+          {/* <Route exact path="/matrix">
             <Matrix />
-          </Route>
+          </Route> */}
           <Route path="/*">
             <NoMatch />
           </Route>

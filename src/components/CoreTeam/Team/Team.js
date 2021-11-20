@@ -16,7 +16,7 @@ export const Team = () => {
     }
 
     useEffect(() => {
-        fetch("https://ignismun.in/backend/core-team")
+        fetch("http://localhost:9000/backend/core-team")
             .then(res => res.json())
             .then(
                 (result) => {

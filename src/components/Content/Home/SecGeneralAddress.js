@@ -134,46 +134,18 @@ const SecGeneralAddress = () => {
         <p className="text-base text-gray-700 md:text-lg sm:px-4 text-justify">
           <p className="mb-5 text-center">Dear Delegates,</p>
 
-          “We are not only all responsible for each other’s security. We are
-          also, in some measure, responsible for each other’s welfare.”
-          -Kofi Annan <br /><br />
-
-
-          On behalf of our Secretariat, I am truly honoured to welcome
-          you to the very first iteration of the IGNIS Model United Nations
-          E-Conference.
+          On behalf of our Secretariat, I am truly honoured to welcome you to the second iteration of the IGNIS Model United Nations E-Conference. 
+          The success of our first-ever online conference previously this year demonstrated our ability to increase accessibility and ability to deliver fundamental experiences through alternative mediums. Therefore, I, Pratinav Deb, the Secretary-General of IGNIS MUN am incredibly excited to announce the launch of the second edition of this prestigious E-Conference aiming to foster interest in international relations and skills in public speaking and researching. 
 
           <br /><br />
-
-          We are looking to kickstart the very first edition of this Model
-          United Nations E-Conference with extreme exhilaration and joy.
-          The Secretariat and the Executive Board at IGNIS have a
-          combined experience of 250+ MUNs and promise to bring
-          nothing but the best to the table and are excited to welcome
-          back old friends and greet many new ones. 
-          I’m Pratinav Deb, for me personally, the conference is an
-          extraordinary honour and I look forward to serving you this year
-          as Secretary General. I assure you, my team, as always, is
-          comprised of experienced students who are willing to go out of
-          their way to ensure that every attendee at this year’s conference
-          is comfortable and confident. Our Organising Committee and
-          the extended Organising committee consisting of the Logistics
-          and Public Relations team are in place, and together our
-          services are available to the fullest extent for each delegate for
-          we at IGNIS believe that we are responsible for others’ welfare.
-          I will be conducting training sessions along with my substance
-          team to help first timers discover a better version of themselves
-          and get acquainted to the different MUN aspects which include
-          the Rules of Procedure and research. Please avail yourselves of
-          our knowledgeable and helpful team. It is my hope that we can
-          help you in any way to prepare for this conference.
-          As always, I am happy to field any of your questions, comments
-          or concerns and feel free to reach out to me.
+          Our commitment to excellence permeates every facet of our organization and conference. The second edition of IGNIS MUN will feature 4 different and comprehensive committees that talk about very relevant and riveting agendas, in order to raise awareness about the four very important aspects of being a responsible global citizen; humanity, finance, politics and security. 
+          My team, that consists of avid MUNers and very experienced ones have a combined experience of over 300 MUNs as delegates, Chairs, Secretariat members and logistics members and are willing to go out of the way to ensure every delegate is comfortable and confident. 
+          I will be conducting training sessions along with my substance team to help first timers discover a better version of themselves and get acquainted to the different MUN aspects which include the Rules of Procedure and research. Please avail yourselves of our knowledgeable and helpful team. It is my hope that we can help you in any way to prepare for this conference. As always, I am happy to field any of your questions, comments or concerns and feel free to reach out to me.
           <br /><br />
           Thanks, and Best Wishes to all the delegates,
           <br />
           Pratinav Deb,
-          Secretary General, IGNIS MUN 2021 <br></br><br></br>
+          Secretary General, IGNIS MUN 2.0 <br></br><br></br>
           <a
             href="https://www.instagram.com/pratinavdeb/"
             className="text-gray-500 transition-colors duration-300 hover:text-orange-600"

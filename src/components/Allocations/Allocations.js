@@ -18,7 +18,7 @@ const Allocations = () => {
         e.preventDefault();
         setIsErr(false);
         let com = null;
-        axios.get('https://ignismun.in/backend/allocations/' + email)
+        axios.get('http://localhost:9000/backend/allocations/' + email)
             .then(res => {
                 if (res.data.allocations.length !== 0) {
                     console.log(res.data)

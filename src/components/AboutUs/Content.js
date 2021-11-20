@@ -7,10 +7,10 @@ const AboutUsContent = () => {
 
             The secretariat has worked together on multiple past occasions and they promise to deliver an MUN with quality debate and fulfilling discussions. IGNIS MUN is designed for delegates from all debate backgrounds, experienced or first-time MUNers and promises to bring passionate debaters together to respond to global concerns. 
 
-            Prepare yourself for what promises to be an action-packed MUN on the 28th, 29th and the 30th of May and win exciting cash prizes
+            Prepare yourself for what promises to be an action-packed MUN on the 17th, 18th and the 19th of December and win exciting cash prizes
 
             Fill the form below to register! {' '}
-            <a href="https://forms.gle/q5p3uSeb1hR3PKQC8">Click here to register</a>
+            <a href="https://forms.gle/cda7HBadadRWsLaUA">Click here to register</a>
           </p>
           <hr className="w-full my-8 border-gray-300" />
         </div>

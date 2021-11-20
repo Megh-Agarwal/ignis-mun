@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 const Nav = () => {
-    const items = ["DISEC", "ECOFIN", "SOCHUM", "UNODC", "CCC", "AIPPM", "NIGHT CRISIS"];
+    const items = ["UNHRC", "SPECPOL", "UNODC", "ECOFIN"];
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
@@ -23,23 +23,26 @@ const Nav = () => {
           </a>
           <ul class="text-base font-serif flex items-center hidden space-x-8 lg:flex">
             <li>
+              <Link to="/" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Home</Link>
+            </li>
+            {/* <li>
               <Link to="/matrix" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Matrix</Link>
             </li>
             <li>
               <Link to="/schedule" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Schedule</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/about-us" className="font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">About us</Link>
             </li>
             <li>
               <Dropdown title="Committees" className="font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600" items={items}/>
             </li>
-            <li>
+            {/* <li>
               <Link to="/allocations" className="font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Allocations</Link>
             </li>
             <li>
               <Link to="/resources" className="font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Resources</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/faq" className="font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">FAQ</Link>
             </li>
