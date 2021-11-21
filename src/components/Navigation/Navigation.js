@@ -117,23 +117,26 @@ const Nav = () => {
                   <nav>
                     <ul class="space-y-4">
                       <li>
+                        <Link to="/" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Home</Link>
+                      </li>
+                      {/* <li>
                         <Link to="/matrix" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Matrix</Link>
-                      </li>
-                      <li>
+                      </li> */}
+                      {/* <li>
                         <Link to="/schedule" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Schedule</Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link to="/about-us" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">About us</Link>
                       </li>
                       <li>
                         <Dropdown title="Committees" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600" items={items}/>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link to="/allocations" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Allocations</Link>
-                      </li>
-                      <li>
+                      </li> */}
+                      {/* <li>
                         <Link to="/resources" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Resources</Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link to="/faq" className="font-serif font-medium text-lg tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">FAQ</Link>
                       </li>
