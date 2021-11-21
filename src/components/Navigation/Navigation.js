@@ -53,7 +53,7 @@ const Nav = () => {
           <ul class="flex items-center hidden space-x-8 lg:flex">
             <li>
               <a
-                href="https://forms.gle/q5p3uSeb1hR3PKQC8"
+                href="https://forms.gle/M7hyWQBmych2NH2F9"
                 class="inline-flex items-center justify-center h-12 px-6 font-serif tracking-wide text-white transition duration-200 rounded shadow-md bg-gradient-to-r from-yellow-500 to-red-600"
                 aria-label="Register"
                 title="Register"
@@ -145,7 +145,7 @@ const Nav = () => {
                       </li>
                       <li>
                         <a
-                          href="https://forms.gle/q5p3uSeb1hR3PKQC8"
+                          href="https://forms.gle/M7hyWQBmych2NH2F9"
                           class="inline-flex items-center w-full text-lg justify-center h-12 px-6 font-serif tracking-wide text-white transition duration-200 rounded shadow-md bg-gradient-to-r from-yellow-500 to-red-600"
                           aria-label="Register"
                           title="Register"
@@ -199,7 +199,7 @@ const Nav = () => {
     //             <Link to="/contact" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Contact</Link>
     //           </li>
     //           <li>
-    //             <a href="https://forms.gle/q5p3uSeb1hR3PKQC8" target="_blank" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Register</a>
+    //             <a href="https://forms.gle/M7hyWQBmych2NH2F9" target="_blank" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Register</a>
     //           </li>
     //         </ul>
     //         <div className="lg:hidden">
@@ -296,7 +296,7 @@ const Nav = () => {
     //                     <Link to="/contact" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Contact</Link>
     //                   </li>
     //                   <li>
-    //                     <a href="https://forms.gle/q5p3uSeb1hR3PKQC8" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Register</a>
+    //                     <a href="https://forms.gle/M7hyWQBmych2NH2F9" className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-orange-600">Register</a>
     //                   </li>
     //                   </ul>
     //                 </nav>
